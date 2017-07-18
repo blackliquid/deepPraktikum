@@ -87,7 +87,7 @@ sess.run(tf.global_variables_initializer())
 saver = tf.train.Saver()
 
 
-for i in range(10000):
+for i in range(1):
   batch = mnist.train.next_batch(50)
   if i%100 == 0:
     print("step %d" %i)
