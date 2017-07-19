@@ -52,31 +52,33 @@ b_fc2 = bias_variable([10])
 y_conv_ = tf.matmul(h_fc1, W_fc2)
 y_conv = tf.add(y_conv_, b_fc2)
 
-W_fc1_r = weight_variable([10, 7*7*32])
-b_fc1_r = bias_variable([7*7*32])
+channels = 32
+
+W_fc1_r = weight_variable([10, 7*7*channels])
+b_fc1_r = bias_variable([7*7*channels])
 
 h_fc1_r_ = tf.matmul(y_conv, W_fc1_r)
 h_fc1_r = tf.add(h_fc1_r_, b_fc1_r)
-h_fc1_r_flat = tf.reshape(h_fc1_r, [-1, 7, 7, 32])
+h_fc1_r_flat = tf.reshape(h_fc1_r, [-1, 7, 7, channels])
 
-W_conv2_r = weight_variable([2, 2, 32, 32])
-b_conv2_r = bias_variable([32])
-output_shape_conv2r = [batch_size, 14, 14, 32]
+W_conv2_r = weight_variable([2, 2, channels, channels])
+b_conv2_r = bias_variable([channels])
+output_shape_conv2r = [batch_size, 14, 14, channels]
 
 h_conv2_r = tf.nn.relu(deconv2d(h_fc1_r_flat, W_conv2_r, output_shape_conv2r) + b_conv2_r) #deconvolution1
 
-W_conv1_r = weight_variable([2, 2, 32, 32])
-b_conv1_r = bias_variable([32])
-output_shape_conv1r = [batch_size, 28, 28, 32]
+W_conv1_r = weight_variable([2, 2, channels, channels])
+b_conv1_r = bias_variable([channels])
+output_shape_conv1r = [batch_size, 28, 28, channels]
 
 h_conv1_r = deconv2d(h_conv2_r, W_conv1_r, output_shape_conv1r)+ b_conv1_r #deconvolution 2
-output_img = tf.nn.softmax(tf.reshape(tf.reduce_mean(h_conv1_r, axis=3, keep_dims=True), [-1]),  name='output_img')
-#output_img = tf.reshape(tf.reduce_mean(h_conv1_r, axis=3, keep_dims=True), [-1],  name='output_img')
+#output_img = tf.nn.softmax(tf.reshape(tf.reduce_mean(h_conv1_r, axis=3, keep_dims=True), [-1]),  name='output_img')
+output_img = tf.reshape(tf.reduce_mean(h_conv1_r, axis=3, keep_dims=True), [-1],  name='output_img')
 
-
-cross_entropy = tf.reduce_mean(-tf.reduce_sum(x_flat * tf.log(output_img), reduction_indices=[0]))#manual cross-entropy. Numerically instable
+#cross_entropy = tf.reduce_mean(-tf.reduce_sum(x_flat * tf.log(output_img), reduction_indices=[0]))#manual cross-entropy. Numerically instable
 #cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=x_flat, logits=output_img, dim=0)) #nice entropy function. Doesnt work
-train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
+least_squares = tf.reduce_sum((tf.multiply(x_flat- output_img),(x_flat- output_img)))
+train_step = tf.train.AdamOptimizer(1e-4).minimize(least_squares)
 
 sess.run(tf.global_variables_initializer())
 saver = tf.train.Saver()
@@ -84,7 +86,7 @@ saver = tf.train.Saver()
 
 for i in range(20000):
     batch = mnist.train.next_batch(50)
-    [_, loss_val] = sess.run([train_step, cross_entropy], feed_dict={x: batch[0], batch_size: 50})
+    [_, loss_val] = sess.run([train_step, least_squares], feed_dict={x: batch[0], batch_size: 50})
     if i%100 == 0:
         print("step %d, loss %g" %(i, loss_val))
 
