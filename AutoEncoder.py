@@ -75,13 +75,13 @@ b_conv1_r = bias_variable([1])
 output_shape_conv1r = [batch_size, 28, 28, 1]
 
 h_conv1_r = deconv2d(h_conv2_r, W_conv1_r, output_shape_conv1r)+ b_conv1_r #deconvolution 2
-output_img = tf.nn.softmax(tf.reshape(h_conv1_r, [-1]), name='output_img')
-#output_img = tf.log(tf.reshape(h_conv1_r, [-1], name='output_img'))
+output_img = tf.nn.softmax(tf.reshape(h_conv1_r, [-1]), name='output_img') #use this for manual cross-entropy
+#output_img = tf.log(tf.reshape(h_conv1_r, [-1], name='output_img')) #use this for the nice entropy function!
 
 
 
-cross_entropy = tf.reduce_mean(-tf.reduce_sum(x_flat * tf.log(output_img), reduction_indices=[0]))
-#cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=x_flat, logits=output_img))
+cross_entropy = tf.reduce_mean(-tf.reduce_sum(x_flat * tf.log(output_img), reduction_indices=[0]))#manual cross-entropy. Numerically instable
+#cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=x_flat, logits=output_img)) #nice entropy function. Doesnt work
 train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
 
 sess.run(tf.global_variables_initializer())
