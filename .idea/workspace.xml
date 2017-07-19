@@ -2,6 +2,106 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67876b2d-717a-4b0d-ba6b-367f79351cdd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_0.png" afterPath="$PROJECT_DIR$/images/images/generated_0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_1.png" afterPath="$PROJECT_DIR$/images/images/generated_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_10.png" afterPath="$PROJECT_DIR$/images/images/generated_10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_11.png" afterPath="$PROJECT_DIR$/images/images/generated_11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_12.png" afterPath="$PROJECT_DIR$/images/images/generated_12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_13.png" afterPath="$PROJECT_DIR$/images/images/generated_13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_14.png" afterPath="$PROJECT_DIR$/images/images/generated_14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_15.png" afterPath="$PROJECT_DIR$/images/images/generated_15.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_16.png" afterPath="$PROJECT_DIR$/images/images/generated_16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_17.png" afterPath="$PROJECT_DIR$/images/images/generated_17.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_18.png" afterPath="$PROJECT_DIR$/images/images/generated_18.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_19.png" afterPath="$PROJECT_DIR$/images/images/generated_19.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_2.png" afterPath="$PROJECT_DIR$/images/images/generated_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_20.png" afterPath="$PROJECT_DIR$/images/images/generated_20.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_21.png" afterPath="$PROJECT_DIR$/images/images/generated_21.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_22.png" afterPath="$PROJECT_DIR$/images/images/generated_22.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_23.png" afterPath="$PROJECT_DIR$/images/images/generated_23.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_24.png" afterPath="$PROJECT_DIR$/images/images/generated_24.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_25.png" afterPath="$PROJECT_DIR$/images/images/generated_25.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_26.png" afterPath="$PROJECT_DIR$/images/images/generated_26.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_27.png" afterPath="$PROJECT_DIR$/images/images/generated_27.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_28.png" afterPath="$PROJECT_DIR$/images/images/generated_28.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_29.png" afterPath="$PROJECT_DIR$/images/images/generated_29.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_3.png" afterPath="$PROJECT_DIR$/images/images/generated_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_30.png" afterPath="$PROJECT_DIR$/images/images/generated_30.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_31.png" afterPath="$PROJECT_DIR$/images/images/generated_31.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_32.png" afterPath="$PROJECT_DIR$/images/images/generated_32.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_33.png" afterPath="$PROJECT_DIR$/images/images/generated_33.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_34.png" afterPath="$PROJECT_DIR$/images/images/generated_34.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_35.png" afterPath="$PROJECT_DIR$/images/images/generated_35.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_36.png" afterPath="$PROJECT_DIR$/images/images/generated_36.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_37.png" afterPath="$PROJECT_DIR$/images/images/generated_37.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_38.png" afterPath="$PROJECT_DIR$/images/images/generated_38.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_39.png" afterPath="$PROJECT_DIR$/images/images/generated_39.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_4.png" afterPath="$PROJECT_DIR$/images/images/generated_4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_40.png" afterPath="$PROJECT_DIR$/images/images/generated_40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_41.png" afterPath="$PROJECT_DIR$/images/images/generated_41.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_42.png" afterPath="$PROJECT_DIR$/images/images/generated_42.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_43.png" afterPath="$PROJECT_DIR$/images/images/generated_43.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_44.png" afterPath="$PROJECT_DIR$/images/images/generated_44.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_45.png" afterPath="$PROJECT_DIR$/images/images/generated_45.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_46.png" afterPath="$PROJECT_DIR$/images/images/generated_46.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_47.png" afterPath="$PROJECT_DIR$/images/images/generated_47.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_48.png" afterPath="$PROJECT_DIR$/images/images/generated_48.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_49.png" afterPath="$PROJECT_DIR$/images/images/generated_49.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_5.png" afterPath="$PROJECT_DIR$/images/images/generated_5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_6.png" afterPath="$PROJECT_DIR$/images/images/generated_6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_7.png" afterPath="$PROJECT_DIR$/images/images/generated_7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_8.png" afterPath="$PROJECT_DIR$/images/images/generated_8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_9.png" afterPath="$PROJECT_DIR$/images/images/generated_9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_0.png" afterPath="$PROJECT_DIR$/images/images/orig_0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_1.png" afterPath="$PROJECT_DIR$/images/images/orig_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_10.png" afterPath="$PROJECT_DIR$/images/images/orig_10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_11.png" afterPath="$PROJECT_DIR$/images/images/orig_11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_12.png" afterPath="$PROJECT_DIR$/images/images/orig_12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_13.png" afterPath="$PROJECT_DIR$/images/images/orig_13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_14.png" afterPath="$PROJECT_DIR$/images/images/orig_14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_15.png" afterPath="$PROJECT_DIR$/images/images/orig_15.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_16.png" afterPath="$PROJECT_DIR$/images/images/orig_16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_17.png" afterPath="$PROJECT_DIR$/images/images/orig_17.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_18.png" afterPath="$PROJECT_DIR$/images/images/orig_18.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_19.png" afterPath="$PROJECT_DIR$/images/images/orig_19.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_2.png" afterPath="$PROJECT_DIR$/images/images/orig_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_20.png" afterPath="$PROJECT_DIR$/images/images/orig_20.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_21.png" afterPath="$PROJECT_DIR$/images/images/orig_21.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_22.png" afterPath="$PROJECT_DIR$/images/images/orig_22.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_23.png" afterPath="$PROJECT_DIR$/images/images/orig_23.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_24.png" afterPath="$PROJECT_DIR$/images/images/orig_24.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_25.png" afterPath="$PROJECT_DIR$/images/images/orig_25.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_26.png" afterPath="$PROJECT_DIR$/images/images/orig_26.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_27.png" afterPath="$PROJECT_DIR$/images/images/orig_27.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_28.png" afterPath="$PROJECT_DIR$/images/images/orig_28.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_29.png" afterPath="$PROJECT_DIR$/images/images/orig_29.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_3.png" afterPath="$PROJECT_DIR$/images/images/orig_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_30.png" afterPath="$PROJECT_DIR$/images/images/orig_30.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_31.png" afterPath="$PROJECT_DIR$/images/images/orig_31.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_32.png" afterPath="$PROJECT_DIR$/images/images/orig_32.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_33.png" afterPath="$PROJECT_DIR$/images/images/orig_33.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_34.png" afterPath="$PROJECT_DIR$/images/images/orig_34.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_35.png" afterPath="$PROJECT_DIR$/images/images/orig_35.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_36.png" afterPath="$PROJECT_DIR$/images/images/orig_36.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_37.png" afterPath="$PROJECT_DIR$/images/images/orig_37.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_38.png" afterPath="$PROJECT_DIR$/images/images/orig_38.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_39.png" afterPath="$PROJECT_DIR$/images/images/orig_39.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_4.png" afterPath="$PROJECT_DIR$/images/images/orig_4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_40.png" afterPath="$PROJECT_DIR$/images/images/orig_40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_41.png" afterPath="$PROJECT_DIR$/images/images/orig_41.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_42.png" afterPath="$PROJECT_DIR$/images/images/orig_42.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_43.png" afterPath="$PROJECT_DIR$/images/images/orig_43.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_44.png" afterPath="$PROJECT_DIR$/images/images/orig_44.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_45.png" afterPath="$PROJECT_DIR$/images/images/orig_45.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_46.png" afterPath="$PROJECT_DIR$/images/images/orig_46.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_47.png" afterPath="$PROJECT_DIR$/images/images/orig_47.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_48.png" afterPath="$PROJECT_DIR$/images/images/orig_48.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_49.png" afterPath="$PROJECT_DIR$/images/images/orig_49.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_5.png" afterPath="$PROJECT_DIR$/images/images/orig_5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_6.png" afterPath="$PROJECT_DIR$/images/images/orig_6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_7.png" afterPath="$PROJECT_DIR$/images/images/orig_7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_8.png" afterPath="$PROJECT_DIR$/images/images/orig_8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_9.png" afterPath="$PROJECT_DIR$/images/images/orig_9.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model.data-00000-of-00001" afterPath="$PROJECT_DIR$/model.data-00000-of-00001" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model.index" afterPath="$PROJECT_DIR$/model.index" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model.meta" afterPath="$PROJECT_DIR$/model.meta" />
@@ -21,12 +121,22 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="AutoEncoder.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AutoEncoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+            <state relative-caret-position="636">
+              <caret line="82" column="79" lean-forward="false" selection-start-line="82" selection-start-column="79" selection-end-line="82" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nn_ops.py" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/ops/nn_ops.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21585">
+              <caret line="1458" column="4" lean-forward="false" selection-start-line="1458" selection-start-column="4" selection-end-line="1458" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -35,8 +145,8 @@
       <file leaf-file-name="Generate.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Generate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="57" lean-forward="false" selection-start-line="24" selection-start-column="57" selection-end-line="26" selection-end-column="48" />
+            <state relative-caret-position="345">
+              <caret line="23" column="57" lean-forward="false" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -45,7 +155,7 @@
       <file leaf-file-name="pilutil.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/scipy/misc/pilutil.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="2820">
               <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
               <folding />
             </state>
@@ -55,8 +165,8 @@
       <file leaf-file-name="session.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/client/session.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="944" column="0" lean-forward="false" selection-start-line="944" selection-start-column="0" selection-end-line="944" selection-end-column="0" />
+            <state relative-caret-position="11565">
+              <caret line="788" column="0" lean-forward="false" selection-start-line="788" selection-start-column="0" selection-end-line="788" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -65,7 +175,7 @@
       <file leaf-file-name="ops.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/framework/ops.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="39630">
               <caret line="2672" column="0" lean-forward="false" selection-start-line="2672" selection-start-column="0" selection-end-line="2672" selection-end-column="0" />
               <folding />
             </state>
@@ -85,6 +195,7 @@
     <findStrings>
       <find>bat</find>
       <find>as</find>
+      <find>train_</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -96,8 +207,8 @@
         <option value="$USER_HOME$/PycharmProjects/Mnist/classify_handwritten.py" />
         <option value="$USER_HOME$/PycharmProjects/AutoEncode/AutoEncoder.py" />
         <option value="$USER_HOME$/PycharmProjects/AutoEncode/Generate.py" />
-        <option value="$PROJECT_DIR$/AutoEncoder.py" />
         <option value="$PROJECT_DIR$/Generate.py" />
+        <option value="$PROJECT_DIR$/AutoEncoder.py" />
       </list>
     </option>
   </component>
@@ -148,7 +259,7 @@
       <recent name="$PROJECT_DIR$/AutoEncoder" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Generate (1)">
+  <component name="RunManager" selected="Python.AutoEncoder (1)">
     <configuration default="false" name="AutoEncoder" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -359,10 +470,10 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.Generate (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.AutoEncoder (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Generate" />
-        <item index="3" class="java.lang.String" itemvalue="Python.AutoEncoder" />
+        <item index="0" class="java.lang.String" itemvalue="Python.AutoEncoder (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.AutoEncoder" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Generate (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Generate" />
       </list>
     </recent_temporary>
   </component>
@@ -431,19 +542,59 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AutoEncoder/AutoEncoder.py">
+    <entry file="file://$PROJECT_DIR$/AutoEncoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="62" column="63" lean-forward="false" selection-start-line="62" selection-start-column="63" selection-end-line="62" selection-end-column="63" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/ops/nn_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21870">
+          <caret line="1458" column="4" lean-forward="false" selection-start-line="1458" selection-start-column="4" selection-end-line="1458" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="57" lean-forward="false" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/scipy/misc/pilutil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2820">
+          <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11565">
+          <caret line="788" column="0" lean-forward="false" selection-start-line="788" selection-start-column="0" selection-end-line="788" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/framework/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39630">
+          <caret line="2672" column="0" lean-forward="false" selection-start-line="2672" selection-start-column="0" selection-end-line="2672" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoEncoder/AutoEncoder.py" />
     <entry file="file:///usr/lib/python3.5/contextlib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -451,37 +602,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="41" lean-forward="false" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/AutoEncode/Generate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/PycharmProjects/AutoEncode/AutoEncoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="830">
-          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/client/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="944" column="0" lean-forward="false" selection-start-line="944" selection-start-column="0" selection-end-line="944" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/AutoEncode/Generate.py" />
+    <entry file="file://$USER_HOME$/PycharmProjects/AutoEncode/AutoEncoder.py" />
     <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/framework/ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="39630">
           <caret line="2672" column="0" lean-forward="false" selection-start-line="2672" selection-start-column="0" selection-end-line="2672" selection-end-column="0" />
           <folding />
         </state>
@@ -489,24 +617,40 @@
     </entry>
     <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/scipy/misc/pilutil.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="2820">
           <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/ops/nn_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21585">
+          <caret line="1458" column="4" lean-forward="false" selection-start-line="1458" selection-start-column="4" selection-end-line="1458" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11565">
+          <caret line="788" column="0" lean-forward="false" selection-start-line="788" selection-start-column="0" selection-end-line="788" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Generate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="57" lean-forward="false" selection-start-line="24" selection-start-column="57" selection-end-line="26" selection-end-column="48" />
+        <state relative-caret-position="345">
+          <caret line="23" column="57" lean-forward="false" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AutoEncoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+        <state relative-caret-position="636">
+          <caret line="82" column="79" lean-forward="false" selection-start-line="82" selection-start-column="79" selection-end-line="82" selection-end-column="79" />
           <folding />
         </state>
       </provider>

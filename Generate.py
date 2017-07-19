@@ -19,7 +19,6 @@ batch = mnist.train.next_batch(50)[0]
 result = sess.run(output_img, feed_dict = {x: batch, batch_size:50})
 img = np.reshape(result, [50, 28, 28])
 
-
 for i in range(0, batch_size_now):
     orig_img = np.reshape(batch[i], [28, 28])
     scipy.misc.imsave('./images/orig_%s.png'%i, orig_img)

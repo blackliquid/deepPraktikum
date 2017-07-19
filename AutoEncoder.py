@@ -23,7 +23,7 @@ def deconv2d(x, W, output_shape):
     '''output = tf.constant(0.1, shape=[50, 14, 14, 1])
     expected_l = tf.nn.conv2d(output, W, strides=[1, 2, 2, 1], padding='VALID')
     print("expected shape", expected_l.get_shape())'''
-    print("x shape:", x.get_shape())
+    #print("x shape:", x.get_shape())
     return tf.nn.conv2d_transpose(x, W,output_shape, strides=[1, 2, 2, 1], padding='VALID')
 
 def max_pool_2x2(x):
@@ -74,28 +74,25 @@ W_conv1_r = weight_variable([2, 2, 1, 1])
 b_conv1_r = bias_variable([1])
 output_shape_conv1r = [batch_size, 28, 28, 1]
 
-h_conv1_r = tf.nn.relu(deconv2d(h_conv2_r, W_conv1_r, output_shape_conv1r) + b_conv1_r) #deconvolution 2
-output_img = tf.multiply(tf.nn.softmax(tf.reshape(h_conv1_r, [-1])), 255, name='output_img')
+h_conv1_r = deconv2d(h_conv2_r, W_conv1_r, output_shape_conv1r)+ b_conv1_r #deconvolution 2
+output_img = tf.nn.softmax(tf.reshape(h_conv1_r, [-1]), name='output_img')
+#output_img = tf.log(tf.reshape(h_conv1_r, [-1], name='output_img'))
 
 
 
-cross_entropy = tf.reduce_mean(-tf.reduce_sum(x_flat * output_img, reduction_indices=[0]))
+cross_entropy = tf.reduce_mean(-tf.reduce_sum(x_flat * tf.log(output_img), reduction_indices=[0]))
+#cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=x_flat, logits=output_img))
 train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)
-'''correct_prediction = tf.equal(h_conv1_r, x_image)
-accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))'''
+
 sess.run(tf.global_variables_initializer())
 saver = tf.train.Saver()
 
 
-for i in range(1):
+for i in range(20000):
   batch = mnist.train.next_batch(50)
+  [_, loss_val] = sess.run([train_step, cross_entropy], feed_dict={x: batch[0], batch_size: 50})
   if i%100 == 0:
-    print("step %d" %i)
-  train_step.run(feed_dict={x: batch[0], batch_size: 50})
-
-''''print("test accuracy %g"%accuracy.eval(feed_dict={
-    x: mnist.test.images, y_: mnist.test.labels}))'''
+    print("step %d, loss %d" %(i, loss_val))
 
 save_path = saver.save(sess, 'model')
 print("Model saved in file: %s" % save_path)
-
