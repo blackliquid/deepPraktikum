@@ -2,6 +2,106 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67876b2d-717a-4b0d-ba6b-367f79351cdd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_0.png" afterPath="$PROJECT_DIR$/images/images/generated_0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_1.png" afterPath="$PROJECT_DIR$/images/images/generated_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_10.png" afterPath="$PROJECT_DIR$/images/images/generated_10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_11.png" afterPath="$PROJECT_DIR$/images/images/generated_11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_12.png" afterPath="$PROJECT_DIR$/images/images/generated_12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_13.png" afterPath="$PROJECT_DIR$/images/images/generated_13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_14.png" afterPath="$PROJECT_DIR$/images/images/generated_14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_15.png" afterPath="$PROJECT_DIR$/images/images/generated_15.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_16.png" afterPath="$PROJECT_DIR$/images/images/generated_16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_17.png" afterPath="$PROJECT_DIR$/images/images/generated_17.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_18.png" afterPath="$PROJECT_DIR$/images/images/generated_18.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_19.png" afterPath="$PROJECT_DIR$/images/images/generated_19.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_2.png" afterPath="$PROJECT_DIR$/images/images/generated_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_20.png" afterPath="$PROJECT_DIR$/images/images/generated_20.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_21.png" afterPath="$PROJECT_DIR$/images/images/generated_21.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_22.png" afterPath="$PROJECT_DIR$/images/images/generated_22.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_23.png" afterPath="$PROJECT_DIR$/images/images/generated_23.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_24.png" afterPath="$PROJECT_DIR$/images/images/generated_24.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_25.png" afterPath="$PROJECT_DIR$/images/images/generated_25.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_26.png" afterPath="$PROJECT_DIR$/images/images/generated_26.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_27.png" afterPath="$PROJECT_DIR$/images/images/generated_27.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_28.png" afterPath="$PROJECT_DIR$/images/images/generated_28.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_29.png" afterPath="$PROJECT_DIR$/images/images/generated_29.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_3.png" afterPath="$PROJECT_DIR$/images/images/generated_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_30.png" afterPath="$PROJECT_DIR$/images/images/generated_30.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_31.png" afterPath="$PROJECT_DIR$/images/images/generated_31.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_32.png" afterPath="$PROJECT_DIR$/images/images/generated_32.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_33.png" afterPath="$PROJECT_DIR$/images/images/generated_33.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_34.png" afterPath="$PROJECT_DIR$/images/images/generated_34.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_35.png" afterPath="$PROJECT_DIR$/images/images/generated_35.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_36.png" afterPath="$PROJECT_DIR$/images/images/generated_36.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_37.png" afterPath="$PROJECT_DIR$/images/images/generated_37.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_38.png" afterPath="$PROJECT_DIR$/images/images/generated_38.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_39.png" afterPath="$PROJECT_DIR$/images/images/generated_39.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_4.png" afterPath="$PROJECT_DIR$/images/images/generated_4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_40.png" afterPath="$PROJECT_DIR$/images/images/generated_40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_41.png" afterPath="$PROJECT_DIR$/images/images/generated_41.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_42.png" afterPath="$PROJECT_DIR$/images/images/generated_42.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_43.png" afterPath="$PROJECT_DIR$/images/images/generated_43.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_44.png" afterPath="$PROJECT_DIR$/images/images/generated_44.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_45.png" afterPath="$PROJECT_DIR$/images/images/generated_45.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_46.png" afterPath="$PROJECT_DIR$/images/images/generated_46.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_47.png" afterPath="$PROJECT_DIR$/images/images/generated_47.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_48.png" afterPath="$PROJECT_DIR$/images/images/generated_48.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_49.png" afterPath="$PROJECT_DIR$/images/images/generated_49.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_5.png" afterPath="$PROJECT_DIR$/images/images/generated_5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_6.png" afterPath="$PROJECT_DIR$/images/images/generated_6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_7.png" afterPath="$PROJECT_DIR$/images/images/generated_7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_8.png" afterPath="$PROJECT_DIR$/images/images/generated_8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/generated_9.png" afterPath="$PROJECT_DIR$/images/images/generated_9.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_0.png" afterPath="$PROJECT_DIR$/images/images/orig_0.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_1.png" afterPath="$PROJECT_DIR$/images/images/orig_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_10.png" afterPath="$PROJECT_DIR$/images/images/orig_10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_11.png" afterPath="$PROJECT_DIR$/images/images/orig_11.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_12.png" afterPath="$PROJECT_DIR$/images/images/orig_12.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_13.png" afterPath="$PROJECT_DIR$/images/images/orig_13.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_14.png" afterPath="$PROJECT_DIR$/images/images/orig_14.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_15.png" afterPath="$PROJECT_DIR$/images/images/orig_15.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_16.png" afterPath="$PROJECT_DIR$/images/images/orig_16.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_17.png" afterPath="$PROJECT_DIR$/images/images/orig_17.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_18.png" afterPath="$PROJECT_DIR$/images/images/orig_18.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_19.png" afterPath="$PROJECT_DIR$/images/images/orig_19.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_2.png" afterPath="$PROJECT_DIR$/images/images/orig_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_20.png" afterPath="$PROJECT_DIR$/images/images/orig_20.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_21.png" afterPath="$PROJECT_DIR$/images/images/orig_21.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_22.png" afterPath="$PROJECT_DIR$/images/images/orig_22.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_23.png" afterPath="$PROJECT_DIR$/images/images/orig_23.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_24.png" afterPath="$PROJECT_DIR$/images/images/orig_24.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_25.png" afterPath="$PROJECT_DIR$/images/images/orig_25.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_26.png" afterPath="$PROJECT_DIR$/images/images/orig_26.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_27.png" afterPath="$PROJECT_DIR$/images/images/orig_27.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_28.png" afterPath="$PROJECT_DIR$/images/images/orig_28.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_29.png" afterPath="$PROJECT_DIR$/images/images/orig_29.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_3.png" afterPath="$PROJECT_DIR$/images/images/orig_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_30.png" afterPath="$PROJECT_DIR$/images/images/orig_30.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_31.png" afterPath="$PROJECT_DIR$/images/images/orig_31.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_32.png" afterPath="$PROJECT_DIR$/images/images/orig_32.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_33.png" afterPath="$PROJECT_DIR$/images/images/orig_33.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_34.png" afterPath="$PROJECT_DIR$/images/images/orig_34.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_35.png" afterPath="$PROJECT_DIR$/images/images/orig_35.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_36.png" afterPath="$PROJECT_DIR$/images/images/orig_36.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_37.png" afterPath="$PROJECT_DIR$/images/images/orig_37.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_38.png" afterPath="$PROJECT_DIR$/images/images/orig_38.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_39.png" afterPath="$PROJECT_DIR$/images/images/orig_39.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_4.png" afterPath="$PROJECT_DIR$/images/images/orig_4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_40.png" afterPath="$PROJECT_DIR$/images/images/orig_40.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_41.png" afterPath="$PROJECT_DIR$/images/images/orig_41.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_42.png" afterPath="$PROJECT_DIR$/images/images/orig_42.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_43.png" afterPath="$PROJECT_DIR$/images/images/orig_43.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_44.png" afterPath="$PROJECT_DIR$/images/images/orig_44.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_45.png" afterPath="$PROJECT_DIR$/images/images/orig_45.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_46.png" afterPath="$PROJECT_DIR$/images/images/orig_46.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_47.png" afterPath="$PROJECT_DIR$/images/images/orig_47.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_48.png" afterPath="$PROJECT_DIR$/images/images/orig_48.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_49.png" afterPath="$PROJECT_DIR$/images/images/orig_49.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_5.png" afterPath="$PROJECT_DIR$/images/images/orig_5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_6.png" afterPath="$PROJECT_DIR$/images/images/orig_6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_7.png" afterPath="$PROJECT_DIR$/images/images/orig_7.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_8.png" afterPath="$PROJECT_DIR$/images/images/orig_8.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/images/orig_9.png" afterPath="$PROJECT_DIR$/images/images/orig_9.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AutoEncoder.py" afterPath="$PROJECT_DIR$/AutoEncoder.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +120,8 @@
       <file leaf-file-name="AutoEncoder.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AutoEncoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="82" column="26" lean-forward="false" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+            <state relative-caret-position="501">
+              <caret line="63" column="45" lean-forward="false" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -394,7 +494,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5018868" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32925585" sideWeight="0.49811321" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.49811321" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -544,8 +644,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AutoEncoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="82" column="26" lean-forward="false" selection-start-line="82" selection-start-column="26" selection-end-line="82" selection-end-column="26" />
+        <state relative-caret-position="501">
+          <caret line="63" column="45" lean-forward="false" selection-start-line="63" selection-start-column="45" selection-end-line="63" selection-end-column="45" />
           <folding />
         </state>
       </provider>
