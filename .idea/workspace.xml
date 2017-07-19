@@ -1,109 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67876b2d-717a-4b0d-ba6b-367f79351cdd" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_20.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_21.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_22.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_23.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_24.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_25.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_26.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_27.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_28.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_29.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_30.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_31.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_33.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_34.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_35.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_36.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_37.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_38.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_39.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_40.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_41.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_42.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_43.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_44.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_45.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_46.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_47.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_48.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_49.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/generated_9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_0.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_12.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_13.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_14.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_15.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_17.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_20.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_21.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_22.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_23.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_24.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_25.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_26.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_27.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_28.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_29.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_30.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_31.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_32.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_33.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_34.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_35.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_36.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_37.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_38.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_39.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_40.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_41.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_42.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_43.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_44.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_45.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_46.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_47.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_48.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_49.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images/orig_9.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AutoEncoder.py" afterPath="$PROJECT_DIR$/AutoEncoder.py" />
-    </list>
+    <list default="true" id="67876b2d-717a-4b0d-ba6b-367f79351cdd" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -208,10 +106,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1855" />
-    <option name="height" value="1056" />
+    <option name="x" value="-522" />
+    <option name="y" value="730" />
+    <option name="width" value="1267" />
+    <option name="height" value="618" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -486,7 +384,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <frame x="-522" y="730" width="1267" height="618" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17142858" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
