@@ -2,6 +2,419 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67876b2d-717a-4b0d-ba6b-367f79351cdd" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/AutoEncoder.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Generate.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MNIST_data/t10k-images-idx3-ubyte.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MNIST_data/t10k-labels-idx1-ubyte.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MNIST_data/train-images-idx3-ubyte.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MNIST_data/train-labels-idx1-ubyte.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/c" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/checkpoint" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_41.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_42.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_43.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_44.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_45.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_46.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_47.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_48.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_49.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/generated_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_41.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_42.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_43.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_44.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_45.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_46.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_47.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_48.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_49.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_10channel/orig_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_41.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_42.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_43.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_44.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_45.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_46.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_47.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_48.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_49.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/generated_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_41.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_42.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_43.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_44.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_45.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_46.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_47.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_48.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_49.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_2channel/orig_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_41.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_42.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_43.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_44.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_45.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_46.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_47.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_48.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_49.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/generated_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_41.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_42.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_43.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_44.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_45.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_46.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_47.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_48.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_49.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_32channel/orig_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_41.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_42.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_43.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_44.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_45.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_46.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_47.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_48.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_49.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/generated_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_0.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_11.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_12.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_13.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_14.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_15.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_16.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_17.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_18.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_19.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_20.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_21.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_22.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_23.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_24.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_25.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_26.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_27.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_28.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_29.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_30.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_31.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_32.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_33.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_34.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_35.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_36.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_37.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_38.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_39.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_4.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_40.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_41.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_42.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_43.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_44.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_45.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_46.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_47.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_48.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_49.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_6.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_8.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/images/images_badLoss/orig_9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.data-00000-of-00001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.index" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/model.meta" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vcprak@arcturus.informatik.uni-mainz.de" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,61 +430,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AutoEncoder.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/AutoEncoder.py">
+      <file leaf-file-name="AutoEncoder.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AutoEncoder/AutoEncoder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-222">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nn_ops.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/ops/nn_ops.py">
+      <file leaf-file-name="Generate.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AutoEncoder/Generate.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21585">
-              <caret line="1458" column="4" lean-forward="false" selection-start-line="1458" selection-start-column="4" selection-end-line="1458" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Generate.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Generate.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="57" lean-forward="false" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pilutil.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/scipy/misc/pilutil.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2820">
-              <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="session.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/client/session.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11565">
-              <caret line="788" column="0" lean-forward="false" selection-start-line="788" selection-start-column="0" selection-end-line="788" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ops.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/framework/ops.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39630">
-              <caret line="2672" column="0" lean-forward="false" selection-start-line="2672" selection-start-column="0" selection-end-line="2672" selection-end-column="0" />
+            <state relative-caret-position="330">
+              <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -108,13 +481,13 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="191" />
-    <option name="y" value="202" />
-    <option name="width" value="1267" />
-    <option name="height" value="618" />
+    <option name="x" value="65" />
+    <option name="y" value="24" />
+    <option name="width" value="1855" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -127,27 +500,10 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deepPraktikum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="deepPraktikum" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/AutoEncoder/Generate.py" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -386,8 +742,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="191" y="202" width="1267" height="618" extended-state="0" />
-    <editor active="true" />
+    <frame x="65" y="24" width="1855" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17142858" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -437,7 +793,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AutoEncoder.py">
+    <entry file="file://$PROJECT_DIR$/AutoEncoder/AutoEncoder.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -445,25 +801,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/ops/nn_ops.py">
+    <entry file="file://$PROJECT_DIR$/AutoEncoder/Generate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21870">
-          <caret line="1458" column="4" lean-forward="false" selection-start-line="1458" selection-start-column="4" selection-end-line="1458" selection-end-column="4" />
+        <state relative-caret-position="330">
+          <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Generate.py">
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/ops/nn_ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="57" lean-forward="false" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/scipy/misc/pilutil.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2820">
+        <state relative-caret-position="2940">
           <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
           <folding />
         </state>
@@ -471,9 +826,8 @@
     </entry>
     <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/client/session.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11565">
+        <state relative-caret-position="11820">
           <caret line="788" column="0" lean-forward="false" selection-start-line="788" selection-start-column="0" selection-end-line="788" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -481,82 +835,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40080">
           <caret line="2672" column="0" lean-forward="false" selection-start-line="2672" selection-start-column="0" selection-end-line="2672" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AutoEncoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/ops/nn_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21585">
-          <caret line="1458" column="4" lean-forward="false" selection-start-line="1458" selection-start-column="4" selection-end-line="1458" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Generate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="57" lean-forward="false" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/scipy/misc/pilutil.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2820">
-          <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/client/session.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11565">
-          <caret line="788" column="0" lean-forward="false" selection-start-line="788" selection-start-column="0" selection-end-line="788" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/framework/ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39630">
-          <caret line="2672" column="0" lean-forward="false" selection-start-line="2672" selection-start-column="0" selection-end-line="2672" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AutoEncoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoEncoder.py" />
     <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/ops/nn_ops.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21870">
           <caret line="1458" column="4" lean-forward="false" selection-start-line="1458" selection-start-column="4" selection-end-line="1458" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Generate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="57" lean-forward="false" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Generate.py" />
     <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/scipy/misc/pilutil.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2820">
@@ -569,7 +859,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11565">
           <caret line="788" column="0" lean-forward="false" selection-start-line="788" selection-start-column="0" selection-end-line="788" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/framework/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40080">
+          <caret line="2672" column="0" lean-forward="false" selection-start-line="2672" selection-start-column="0" selection-end-line="2672" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoEncoder.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/ops/nn_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21585">
+          <caret line="1458" column="4" lean-forward="false" selection-start-line="1458" selection-start-column="4" selection-end-line="1458" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generate.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/scipy/misc/pilutil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2820">
+          <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11565">
+          <caret line="788" column="0" lean-forward="false" selection-start-line="788" selection-start-column="0" selection-end-line="788" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -577,11 +897,40 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39630">
           <caret line="2672" column="0" lean-forward="false" selection-start-line="2672" selection-start-column="0" selection-end-line="2672" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoEncoder.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/ops/nn_ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21870">
+          <caret line="1458" column="4" lean-forward="false" selection-start-line="1458" selection-start-column="4" selection-end-line="1458" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Generate.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/scipy/misc/pilutil.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2820">
+          <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AutoEncoder/AutoEncoder.py" />
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/client/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11565">
+          <caret line="788" column="0" lean-forward="false" selection-start-line="788" selection-start-column="0" selection-end-line="788" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/framework/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39630">
+          <caret line="2672" column="0" lean-forward="false" selection-start-line="2672" selection-start-column="0" selection-end-line="2672" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///usr/lib/python3.5/contextlib.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
@@ -602,7 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="39630">
           <caret line="2672" column="0" lean-forward="false" selection-start-line="2672" selection-start-column="0" selection-end-line="2672" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -614,34 +962,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Generate.py" />
+    <entry file="file://$PROJECT_DIR$/AutoEncoder.py" />
     <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/ops/nn_ops.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21585">
+        <state relative-caret-position="645">
           <caret line="1458" column="4" lean-forward="false" selection-start-line="1458" selection-start-column="4" selection-end-line="1458" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AutoEncoder/AutoEncoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/tensorflow/python/client/session.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11565">
+        <state relative-caret-position="15">
           <caret line="788" column="0" lean-forward="false" selection-start-line="788" selection-start-column="0" selection-end-line="788" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Generate.py">
+    <entry file="file://$PROJECT_DIR$/AutoEncoder/Generate.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="57" lean-forward="false" selection-start-line="23" selection-start-column="57" selection-end-line="23" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AutoEncoder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-222">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="22" column="37" lean-forward="false" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="37" />
           <folding />
         </state>
       </provider>
