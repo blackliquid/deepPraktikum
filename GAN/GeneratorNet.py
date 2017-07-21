@@ -1,10 +1,12 @@
 import tensorflow as tf
+from DiscriminatorNet import DiscriminatorNet
 
 class GeneratorNet:
 
-    def __init__(self, sdev, batch_size):
+    def __init__(self, sdev, batch_size, discriminatorNet):
         self.sdev = sdev
         self.batch_size = batch_size
+        self.discriminatorNet = discriminatorNet
 
         self.defineWeights()
         self.defineGraph()
@@ -54,7 +56,9 @@ class GeneratorNet:
 
         # result of the FC layer
 
-        self.res_fc = tf.add(tf.matmul(self.randVals_tensor, self.W_fc), self.b_fc)
+        self.res_fc = tf.nn.relu(tf.add(tf.matmul(self.randVals_tensor, self.W_fc), self.b_fc))
+        #leaky ReLu?
+        ##self.res_fc = tf.contrib.keras.layers.LeakyReLu(tf.add(tf.matmul(self.randVals_tensor, self.W_fc), self.b_fc))
         self.res_fc_tensor = tf.reshape(self.res_fc, [-1, 4, 4, 1024])
 
         # array for the results and output_shape of the Deconv layers
@@ -66,16 +70,20 @@ class GeneratorNet:
         # first deconv layer 0 with fc as input
 
         self.res_deconv.append(tf.nn.relu(tf.nn.conv2d_transpose(self.res_fc_tensor, self.W_deconv[0], output_shape[0], strides=strides, padding="VALID")+self.b_deconv[0]))
+        #leaky ReLu?
+        #self.res_deconv.append(tf.contrib.keras.layers.LeakyReLu(tf.nn.conv2d_transpose(self.res_fc_tensor, self.W_deconv[0], output_shape[0], strides=strides, padding="VALID")+self.b_deconv[0]))
 
         # deconv layers 1-2
 
         for i in range(1, 3):
             self.res_deconv.append(tf.nn.relu(tf.nn.conv2d_transpose(self.res_deconv[i-1], self.W_deconv[i], output_shape[i], strides, padding="VALID")+self.b_deconv[i]))
+            #leaky ReLu?
+            #self.res_deconv.append(tf.contrib.keras.layers.LeakyReLu(tf.nn.conv2d_transpose(self.res_deconv[i-1], self.W_deconv[i], output_shape[i], strides, padding="VALID")+self.b_deconv[i]))
 
         # deconv layer 3 = output layer. No Relu here!!
 
         self.res_deconv.append(tf.add(tf.nn.conv2d_transpose(self.res_deconv[2], self.W_deconv[3], output_shape[3], strides=strides, padding="VALID"),self.b_deconv[3], name="generated_img"))
 
     def defineLoss(self):
-        # define loss here
+
         pass
