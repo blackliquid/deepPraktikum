@@ -1,0 +1,36 @@
+Protokoll Deep Learning Praktikum (17.07.17 bis 28.07.17)
+
+Montag, 17.07.:
+	Vorbesprechung/ Einführung in Deep Learning 
+	Initialisierung eines Git-Repository 
+	
+Dienstag, 18.07.:
+	AutoEncoder für MNIST aufbauend auf dem Tutorial:
+	erste Hälfte (bis Bottleneck) aus Tutorial übernommen, zweite Hälfte selbst erstellt (alles reverse)
+	am Ende des Tages unschöne Ergebnisse: 
+	--> erst regelmäßiges Rauschen 
+	--> dann Zahl sehr verpixelt, aber erkennbar 
+	**Verbesserungen durch:  - loss-Funktion mit least squares statt mit cross-entropy berechnet
+	                         - Anzahl der Channels (auf dem Rückweg) erhöht
+	
+Mittwoch, 19.07.:
+	AutoEncoder für MNIST fertiggestellt, schöne Ergebnisse:
+	--> Zahlen klar erkennbar, minimal verschwommen
+	
+Donnerstag, 20.07.:
+	anfängliche Implementierung eines GAN-Algorithmus
+	angefangen, AutoEncoder fuer CelebA-images umzuschreiben:
+	--> trotz Übergang von schwarz-weiß Bildern zu RGB-Bildern (zuätzliche Dimension) Verwendung von conv2D 
+	    (RGB-Dim als "Start-Features", analog zu den durch die Filter erstellten Features, behandelt)
+	--> Anpassen der Anzahl Channels vor und nach Bottleneck, Bottleneck "größer" gewählt, um nicht zu
+	    viele Informationen zu verlieren
+	--> Bildergröße anpassen (statt Eingabe 218x178 Ränder abgeschnitten auf 176x176 oder skaliert auf 64x64,
+	    wobei 64x64 vorausschauend für GAN gewählt wurde)
+	Test, ob Zahlen mit zweiter Hälfte von AutoEncoder mit zufälliger Eingabe erzeugt werden können:
+	--> Ergebnis nur Rauschen!
+	
+Freitag, 21.07.:
+	AutoEncoder fuer CelebA fertiggestellt:
+	--> Bilder verschwommen, aber erkennbar
+	--> individuelle Details werden entfernt/ gehen verloren
+	Weiterentwicklung des GAN-Algorithmus
