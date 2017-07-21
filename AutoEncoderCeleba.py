@@ -11,14 +11,14 @@ import numpy as np
 import tensorflow as tf
 sess = tf.InteractiveSession()
 
-x = tf.placeholder(tf.float32, shape=[176, 176, 3], name="x")
+x = tf.placeholder(tf.float32, shape=[None, 176, 176, 3], name="x")
 batch_size = tf.placeholder(tf.int32, None,  name="batch_size")
 
 #def cut_file(file):   #FILE HAS TO BE OF SHAPE 178x218
     #file = file[[21:-21],[1:-1]]
 
 def random_filelist(batch_size):
-    index = np.random.uniform(1, 202599.99, 50)
+    index = np.random.uniform(1, 202599.99, batch_size)
     index = index.astype(int)
     filelist = np.array(['%06i.jpg' % i for i in index])
     return filelist
@@ -49,6 +49,8 @@ def max_pool_2x2(x):
 
 
 #WICHTIG!! BILDER ZUERST VON 178x218 AUF 176x176 CUTTEN!
+
+batch_size_now = 50
 
 #num_convs = 2
 num_filters1 = 8
@@ -109,7 +111,7 @@ h_conv1_r = deconv2d(h_conv2_r, W_conv1_r, output_shape_conv1r)+ b_conv1_r #deco
 #output_img = tf.nn.softmax(tf.reshape(tf.reduce_mean(h_conv1_r, axis=3, keep_dims=True), [-1]),  name='output_img')
 #output_img = tf.reshape(tf.reduce_mean(h_conv1_r, axis=3, keep_dims=True), [-1],  name='output_img')
 output_img = tf.reshape(h_conv1_r,[batch_size,176,176,3,channels//3])
-output_img = tf.reduce_mean(output_img, axis=4)
+output_img = tf.reduce_mean(output_img, axis=4, name = 'output_img')
 
 #cross_entropy = tf.reduce_mean(-tf.reduce_sum(x_flat * tf.log(output_img), reduction_indices=[0]))#manual cross-entropy. Numerically instable
 #cross_entropy = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits(labels=x_flat, logits=output_img, dim=0)) #nice entropy function. Doesnt work
@@ -120,15 +122,14 @@ train_step = tf.train.AdamOptimizer(1e-4).minimize(least_squares)
 sess.run(tf.global_variables_initializer())
 saver = tf.train.Saver()
 
-
-for i in range(200):
-    filelist = random_filelist(batch_size)
-    batch = np.array([scipy.misc.imread(bild) for bild in filelist])
+for i in range(10000):
+    filelist = random_filelist(batch_size_now)
+    batch = np.array([scipy.misc.imread('./img_align_celeba/'+bild) for bild in filelist])
     batch = cut_filelist(batch)
-    [_, loss_val] = sess.run([train_step, least_squares], feed_dict={x: batch[0], batch_size: 50})
+    [_, loss_val] = sess.run([train_step, least_squares], feed_dict={x: batch, batch_size: batch_size_now})
     if i%100 == 0:
         print("step %d, loss %g" %(i, loss_val))
 
-save_path = saver.save(sess, os.path.join(os.getcwd(), 'model'))
+save_path = saver.save(sess, os.path.join(os.getcwd(), 'modelCeleba'))
 #save_path = saver.save(sess, 'model')
 print("Model saved in file: %s" % save_path)

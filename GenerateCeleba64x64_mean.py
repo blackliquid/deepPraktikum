@@ -1,11 +1,20 @@
-import os
-import scipy
-import scipy.misc
+
+import tensorflow as tf
 import numpy as np
+import scipy.ndimage
+import scipy.misc
 
 
-#from tensorflow.examples.tutorials.mnist import input_data
-#mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
+sess = tf.Session()
+saver = tf.train.import_meta_graph('modelCeleba64x64.meta')
+saver.restore(sess, tf.train.latest_checkpoint('./'))
+
+graph = tf.get_default_graph()
+output_img = graph.get_tensor_by_name("output_img:0")
+x = graph.get_tensor_by_name("x:0")
+batch_size = graph.get_tensor_by_name("batch_size:0")
+
+batch_size_now = 50
 
 
 import tensorflow as tf
@@ -29,13 +38,13 @@ def cut_filelist(list):
     #        filelist[i] = filelist[i, 21:-21, 1:-1]
     return list
 
-def weight_variable(shape, **kw):
+def weight_variable(shape):
     initial = tf.truncated_normal(shape, stddev=0.1)
-    return tf.Variable(initial, **kw)
+    return tf.Variable(initial)
 
-def bias_variable(shape, **kw):
+def bias_variable(shape):
     initial = tf.constant(0.1, shape=shape)
-    return tf.Variable(initial, **kw)
+    return tf.Variable(initial)
 
 def conv2d(x, W):
     return tf.nn.conv2d(x, W, strides=[1, 1, 1, 1], padding='SAME')
@@ -48,7 +57,7 @@ def max_pool_2x2(x):
                         strides=[1, 2, 2, 1], padding='SAME')
 
 
-batch_size_now = 50
+batch_size_now = 2
 
 #num_convs = 2
 num_filters1 = 16
@@ -59,8 +68,8 @@ num_fc2 = 512
 #Rueckweg
 channels = 48   #8*3RGB also: MUSS DURCH 3 TEILBAR SEIN!
 
-W_conv1 = weight_variable([5, 5, 3, num_filters1], name='W_conv1')
-b_conv1 = bias_variable([num_filters1], name='b_conv1')
+W_conv1 = weight_variable([5, 5, 3, num_filters1])
+b_conv1 = bias_variable([num_filters1])
 
 #x_flat = tf.reshape(x, [-1])
 x_image = tf.reshape(x, [-1,64,64,3])
@@ -68,41 +77,41 @@ x_image = tf.reshape(x, [-1,64,64,3])
 h_conv1 = tf.nn.relu(conv2d(x_image, W_conv1) + b_conv1)
 h_pool1 = max_pool_2x2(h_conv1)
 
-W_conv2 = weight_variable([5, 5, num_filters1, num_filters2], name='W_conv2')
-b_conv2 = bias_variable([num_filters2], name='b_conv2')
+W_conv2 = weight_variable([5, 5, num_filters1, num_filters2])
+b_conv2 = bias_variable([num_filters2])
 
 h_conv2 = tf.nn.relu(conv2d(h_pool1, W_conv2) + b_conv2)
 h_pool2 = max_pool_2x2(h_conv2) #output last convlayer
 
-W_fc1 = weight_variable([16 * 16 * num_filters2, num_fc1], name='W_fc1')
-b_fc1 = bias_variable([num_fc1], name='b_fc1')
+W_fc1 = weight_variable([16 * 16 * num_filters2, num_fc1])
+b_fc1 = bias_variable([num_fc1])
 
 h_pool2_flat = tf.reshape(h_pool2, [-1, 16*16*num_filters2])
 h_fc1 = tf.nn.relu(tf.matmul(h_pool2_flat, W_fc1) + b_fc1)
 
-W_fc2 = weight_variable([num_fc1, num_fc2], name='W_fc2')
-b_fc2 = bias_variable([num_fc2], name='b_fc2')
+W_fc2 = weight_variable([num_fc1, num_fc2])
+b_fc2 = bias_variable([num_fc2])
 
 y_conv_ = tf.matmul(h_fc1, W_fc2)
 y_conv = tf.add(y_conv_, b_fc2)
 
 
 
-W_fc1_r = weight_variable([num_fc2, 16*16*channels], name='W_fc1_r')
-b_fc1_r = bias_variable([16*16*channels], name='b_fc1_r')
+W_fc1_r = weight_variable([num_fc2, 16*16*channels])
+b_fc1_r = bias_variable([16*16*channels])
 
 h_fc1_r_ = tf.matmul(y_conv, W_fc1_r)
 h_fc1_r = tf.add(h_fc1_r_, b_fc1_r)
 h_fc1_r_flat = tf.reshape(h_fc1_r, [-1, 16, 16, channels])
 
-W_conv2_r = weight_variable([2, 2, channels, channels], name='W_conv2_r')
-b_conv2_r = bias_variable([channels], name='b_conv2_r')
+W_conv2_r = weight_variable([2, 2, channels, channels])
+b_conv2_r = bias_variable([channels])
 output_shape_conv2r = [batch_size, 32, 32, channels]
 
 h_conv2_r = tf.nn.relu(deconv2d(h_fc1_r_flat, W_conv2_r, output_shape_conv2r) + b_conv2_r) #deconvolution1
 
-W_conv1_r = weight_variable([2, 2, channels, channels], name='W_conv1_r')
-b_conv1_r = bias_variable([channels], name='b_conv1_r')
+W_conv1_r = weight_variable([2, 2, channels, channels])
+b_conv1_r = bias_variable([channels])
 output_shape_conv1r = [batch_size, 64, 64, channels]
 
 h_conv1_r = deconv2d(h_conv2_r, W_conv1_r, output_shape_conv1r)+ b_conv1_r #deconvolution 2
