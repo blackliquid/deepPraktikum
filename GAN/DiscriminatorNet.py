@@ -20,7 +20,7 @@ class DiscriminatorNet:
     def defineWeights(self):
         self.input_batch = tf.placeholder(tf.float32, shape=[None, 64, 64, 3], name="input_batch") #placeholder for input images, fake and real
         self.labels = tf.placeholder(tf.int64, shape=[None, 2], name="labels") #placeholder for labels : generated or real
-        self.batch_size = tf.placeholder(tf.int32, None, name="batch_size") #placeholder for batch_size
+        #self.batch_size = tf.placeholder(tf.int32, None, name="batch_size") #placeholder for batch_size
 
         #define weights for the convLayers 0-3
         '''conv 1 : 64*64*3 -> 64*64*96

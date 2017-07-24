@@ -30,7 +30,7 @@ def batchNorm(batch, eps = 0.01, gamma = 1, beta = 0):
 
 def readBatch(batch_size, max_range):
     for i in range(0, batch_size):
-        rand = np.random.randint(0, max_range, size=batch_size)
+        rand = np.random.randint(1, max_range, size=batch_size)
         batch = np.ndarray(shape=[batch_size, 64, 64, 3])
         for i in rand:
             img = scipy.misc.imread("../Datasets/img_align_celeba_resized/%06d.png" % i)
@@ -48,22 +48,8 @@ def split_lines(lines):
         result.append([int(i) for i in split_line])
     return result
 
-def read_lines(line_nums):
-    line_nums = [i+2 for i in line_nums]
-    n = len(line_nums)
-    max_num = max(line_nums)
-    dict_line_nums = {line_nums[i]:i for i in range(n)}
-    result = n*[0]
-    with open("../Datasets/Anno/list_attr_celeba.txt", "r") as file:
-        for num, line in enumerate(file):
-            if num in dict_line_nums:
-                result[dict_line_nums[num]] = line.strip()
-            elif num > max_num:
-                break
-    return result
-
 def split_lines3D(lines):
-    # Important: Do not schang the list entries before converting them to an np.array!!!
+    # Important: Do not change the list entries before converting them to an np.array!!!
     if isinstance(lines, int):
         lines = [lines]
     result = []
@@ -80,24 +66,50 @@ def split_lines3D(lines):
         result.append(result_line)
     return result
 
+def read_lines(line_nums):
+    line_nums = [i+2 for i in line_nums]
+    n = len(line_nums)
+    max_num = max(line_nums)
+    dict_line_nums = {line_nums[i]:[] for i in range(n)}
+    for i in range(n):
+        dict_line_nums[line_nums[i]].append(i)
+    result = n*[0]
+    with open('../Datasets/Anno/list_attr_celeba.txt') as file:
+        for num, line in enumerate(file):
+            if num in dict_line_nums:
+                for i in dict_line_nums[num]:
+                    result[i] = line.strip()
+            elif num > max_num:
+                break
+    return result
+
+def newBatch():
+    batch, rand = readBatch(batch_size, max_range)
+    print(rand)
+    batchNorm(batch)
+    read = read_lines(rand)
+    attribs = np.array(split_lines3D(read))
+    labels = attribs[:, 3, :]
+    return batch, labels
+
 sdev = 0.1
-numIter = 20000
+numIter = 100000
 numPics = 202599
-batch_size = 10
+batch_size = 64
 max_range = 1000
 
-batch, rand = readBatch(batch_size, max_range)
-batchNorm(batch)
-read = read_lines(rand)
-attribs = np.array(split_lines3D(read), dtype='int64')
-labels =  attribs[:, 3, :]
 discriminatorNet = DiscriminatorNet(sdev)
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
+saver = tf.train.Saver()
+
 
 for i in range(numIter):
     if i % 100 is 0:
+        batch, labels = newBatch()
         train_accuracy = discriminatorNet.accuracy.eval(feed_dict={discriminatorNet.input_batch: batch, discriminatorNet.labels:labels, discriminatorNet.batch_size:batch_size}, session = sess)
         print('step %d, training accuracy %g' % (i, train_accuracy))
     discriminatorNet.optimizer.run(feed_dict = {discriminatorNet.input_batch: batch, discriminatorNet.labels:labels, discriminatorNet.batch_size:batch_size}, session = sess)
 
+save_path = saver.save(sess, 'model/discriminator_attract_100kIter')
+print("Model saved in file: %s" % save_path)
