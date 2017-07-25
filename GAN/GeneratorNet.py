@@ -1,17 +1,13 @@
 import tensorflow as tf
-from DiscriminatorNet import DiscriminatorNet
 
 class GeneratorNet:
 
-    def __init__(self, sdev, batch_size, discriminatorNet):
+    def __init__(self, sdev, batch_size):
         self.sdev = sdev
         self.batch_size = batch_size
-        self.discriminatorNet = discriminatorNet
 
         self.defineWeights()
         self.defineGraph()
-        self.defineLoss()
-
 
     def weight_variable(self, shape):
         # shortcuts for defining the filters
@@ -24,21 +20,22 @@ class GeneratorNet:
         return tf.Variable(initial)
 
     def defineWeights(self):
-        # define all the weights for the network
+        with tf.variable_scope("g_scope"):
+            # define all the weights for the network
 
-        self.W_fc = self.weight_variable([100, 1024*4*4])
-        self.b_fc = self.bias_variable([1024*4*4])
+            self.W_fc = self.weight_variable([100, 1024 * 4 * 4])
+            self.b_fc = self.bias_variable([1024 * 4 * 4])
 
-        self.W_deconv =  []
-        self.b_deconv = []
-        deconv_dims = [1024, 512, 256]
+            self.W_deconv = []
+            self.b_deconv = []
+            deconv_dims = [1024, 512, 256]
 
-        for i in deconv_dims:
-            self.W_deconv.append(self.weight_variable(shape=[5, 5, int(i/2), i])) #[x,y,out,in]
-            self.b_deconv.append(self.bias_variable([int(i/2)]))
+            for i in deconv_dims:
+                self.W_deconv.append(self.weight_variable([5, 5, int(i / 2), i]))  # [x,y,out,in]
+                self.b_deconv.append(self.bias_variable([int(i / 2)]))
 
-        self.W_deconv.append(self.weight_variable([5, 5, 3, 128]))
-        self.b_deconv.append(self.bias_variable([3]))
+            self.W_deconv.append(self.weight_variable([5, 5, 3, 128]))
+            self.b_deconv.append(self.bias_variable([3]))
 
     def defineGraph(self):
         # create the tf computation graph
@@ -68,8 +65,8 @@ class GeneratorNet:
         output_shape = [[self.batch_size, 8, 8, 512],[self.batch_size, 16, 16, 256],[self.batch_size, 8, 8, 128], [self.batch_size, 64, 64,3]]
 
         # first deconv layer 0 with fc as input
-
         self.res_deconv.append(tf.nn.relu(tf.nn.conv2d_transpose(self.res_fc_tensor, self.W_deconv[0], output_shape[0], strides=strides, padding="VALID")+self.b_deconv[0]))
+
         #leaky ReLu?
         #self.res_deconv.append(tf.contrib.keras.layers.LeakyReLu(tf.nn.conv2d_transpose(self.res_fc_tensor, self.W_deconv[0], output_shape[0], strides=strides, padding="VALID")+self.b_deconv[0]))
 
@@ -82,8 +79,8 @@ class GeneratorNet:
 
         # deconv layer 3 = output layer. No Relu here!!
 
-        self.res_deconv.append(tf.add(tf.nn.conv2d_transpose(self.res_deconv[2], self.W_deconv[3], output_shape[3], strides=strides, padding="VALID"),self.b_deconv[3], name="generated_img"))
+        self.res_deconv.append(tf.add(tf.nn.conv2d_transpose(self.res_deconv[2], self.W_deconv[3], output_shape[3], strides=strides, padding="VALID"),self.b_deconv[3]))
 
-    def defineLoss(self):
+        # give it a nice name
 
-        pass
+        self.generated_img = tf.nn.sigmoid(self.res_deconv[3], name="generated_img")
