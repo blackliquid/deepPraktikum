@@ -2,6 +2,7 @@ import os
 import scipy
 import scipy.misc
 import numpy as np
+import pickle
 
 
 #from tensorflow.examples.tutorials.mnist import input_data
@@ -128,6 +129,25 @@ for i in range(10000):
     [_, loss_val] = sess.run([train_step, least_squares], feed_dict={x: batch, batch_size: batch_size_now})
     if i%100 == 0:
         print("step %d, loss %g" %(i, loss_val))
+
+
+# compute mean and covariance matrix of y_conv, assuming its distribution is a multivariate normal distribution
+batch_size_now = 10000
+filelist = random_filelist(batch_size_now)
+batch = np.array([scipy.misc.imread('./img_align_celeba_resized/'+bild) for bild in filelist])
+y_conv_random = sess.run(y_conv, feed_dict={x: batch, batch_size: batch_size_now})
+mu = np.mean(y_conv_random, axis=0)
+sigma = np.cov(np.transpose(y_conv_random))
+
+(W_conv1_v, b_conv1_v, W_conv2_v, b_conv2_v, W_fc1_v, b_fc1_v, W_fc2_v, b_fc2_v, W_fc1_r_v, b_fc1_r_v, W_conv2_r_v,
+ b_conv2_r_v, W_conv1_r_v, b_conv1_r_v) = sess.run((W_conv1, b_conv1, W_conv2, b_conv2, W_fc1, b_fc1, W_fc2, b_fc2,
+                                                    W_fc1_r, b_fc1_r, W_conv2_r, b_conv2_r, W_conv1_r, b_conv1_r))
+
+np.savez('celeba_variables.npz',
+         W_conv1_v=W_conv1_v, b_conv1_v=b_conv1_v, W_conv2_v=W_conv2_v, b_conv2_v=b_conv2_v, W_fc1_v=W_fc1_v,
+         b_fc1_v=b_fc1_v, W_fc2_v=W_fc2_v, b_fc2_v=b_fc2_v, W_fc1_r_v=W_fc1_r_v, b_fc1_r_v=b_fc1_r_v,
+         W_conv2_r_v=W_conv2_r_v, b_conv2_r_v=b_conv2_r_v, W_conv1_r_v=W_conv1_r_v, b_conv1_r_v=b_conv1_r_v,
+         mu=mu, sigma=sigma)
 
 save_path = saver.save(sess, os.path.join(os.getcwd(), 'modelCeleba64x64'))
 #save_path = saver.save(sess, 'model')
