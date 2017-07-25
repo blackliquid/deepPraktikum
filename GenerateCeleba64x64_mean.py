@@ -114,7 +114,3 @@ batch = np.array([scipy.misc.imread('./img_align_celeba_resized/'+bild) for bild
 img = sess.run(output_img, feed_dict={x: batch, batch_size: batch_size_now})
 
 scipy.misc.imsave('imagesCeleba64x64_mean/image.png', img[0])
-
-save_path = saver.save(sess, os.path.join(os.getcwd(), 'modelCeleba64x64'))
-# save_path = saver.save(sess, 'model')
-print("Model saved in file: %s" % save_path)
