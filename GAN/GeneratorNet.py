@@ -37,7 +37,7 @@ class GeneratorNet:
 
         # create uniform random vals als input layer
 
-        self.randVals = tf.random_uniform(shape=[100], minval=0, maxval=1, dtype=tf.float32)
+        self.randVals = tf.random_uniform(shape=[100*self.batch_size], minval=0, maxval=1, dtype=tf.float32)
         self.randVals_tensor = tf.reshape(self.randVals, [-1, 100])
 
         # result of the FC layer
