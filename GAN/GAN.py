@@ -13,6 +13,8 @@ class GAN:
         numIter = 100000
         batch_size = 50
         numIter_disc = 1 #number of times the disc gets updated for every time the gen gets updated
+        max_range = 202599
+        #max_range = 1000
 
         #init placehodler
 
@@ -20,8 +22,8 @@ class GAN:
 
         #init nets
 
-        generatorNet = GeneratorNet(mean, sdev, batch_size)
-        discriminatorNet = DiscriminatorNet(mean, sdev, generatorNet)
+        generatorNet = GeneratorNet(mean, sdev, self.batch_size)
+        discriminatorNet = DiscriminatorNet(mean, sdev, self.batch_size, generatorNet)
 
         #init loss
 
@@ -33,7 +35,7 @@ class GAN:
 
         #train the net
 
-        self.train(numIter, batch_size, numIter_disc)
+        self.train(numIter, batch_size, numIter_disc, generatorNet, max_range)
 
     def createRunSess(self):
         # run the computation
@@ -52,24 +54,48 @@ class GAN:
 
         #placeholder for input images, fake and real
 
-        self.input_batch = tf.placeholder(tf.float32, shape=[None, 64, 64, 3],
+
+        self.batch_size = tf.placeholder(tf.int32, shape = None,
                                           name="input_batch")
 
-    def train(self, numIter, batch_size, numIter_disc):
+        #placeholder for batch_size
+
+        self.input_batch = tf.placeholder(tf.float32, shape = [None, 64, 64, 3],
+                                          name="input_batch")
+
+
+    def train(self, numIter, batch_size, numIter_disc, generatorNet, max_range):
+        print("starting training...")
         with self.sess.as_default():
             for i in range(0, numIter):
                 for k in range(numIter_disc):
                     # train discriminator with batch of db images
 
-                    batch_real, _ = self.newBatch(batch_size)
+                    batch_real, _ = self.newBatch(batch_size, max_range=max_range)
                     self.batchNorm(batch_real)
 
-                    _, D_loss_curr = self.sess.run([self.D_loss], feed_dict = {self.input_batch: batch_real})
-                    #_, D_loss_curr = self.sess.run([self.D_solver, self.D_loss], feed_dict={self.input_batch: batch_real})
+                    _, D_loss_curr = self.sess.run([self.D_solver, self.D_loss], feed_dict={self.input_batch: batch_real, self.batch_size:batch_size})
+                    print("updating discriminator. k=%d" %k)
 
-                # train generator and discriminator with batch_size generated images
+                if i % 1000 is 0 :
+                    print("saving image batch...")
 
-                _, G_loss_curr = self.sess.run([self.G_solver, self.D_loss])
+                    # while training save some of the generated images
+                    #save all of the batch_size generated images
+
+                    generated_img = self.sess.run(generatorNet.generated_img,
+                                                  feed_dict={self.input_batch: batch_real,
+                                                             self.batch_size: batch_size})
+
+                    for j in range(batch_size):
+                        scipy.misc.imsave("../Datasets/GAN_generated/iter_%d_no_%d.png" %(i, j), generated_img[j])
+
+                else :
+                    # train generator with batch_size generated images
+
+                    _, G_loss_curr = self.sess.run([self.G_solver, self.D_loss], feed_dict={self.input_batch: batch_real, self.batch_size:batch_size}) #feed it images too to not cause error
+                    print("updating generator. Iteration %d" %i)
+
 
 
     def batchNorm(self, batch, eps=0.01, gamma=1, beta=0):
@@ -141,7 +167,7 @@ class GAN:
                     break
         return result
 
-    def newBatch(self, batch_size, max_range = 202599):
+    def newBatch(self, batch_size, max_range):
         #read new random batch out of DB. max_range indicates that we can sample from image 0 to max_range.
 
         batch, rand = self.readBatch(batch_size, max_range)

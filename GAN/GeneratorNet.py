@@ -38,14 +38,14 @@ class GeneratorNet:
         # create uniform random vals als input layer
 
         self.randVals = tf.random_uniform(shape=[100*self.batch_size], minval=0, maxval=1, dtype=tf.float32)
-        self.randVals_tensor = tf.reshape(self.randVals, [-1, 100])
+        self.randVals_tensor = tf.reshape(self.randVals, [self.batch_size, 100])
 
         # result of the FC layer
 
         self.res_fc = tf.nn.relu(tf.add(tf.matmul(self.randVals_tensor, self.W_fc), self.b_fc))
         #leaky ReLu?
         ##self.res_fc = tf.contrib.keras.layers.LeakyReLu(tf.add(tf.matmul(self.randVals_tensor, self.W_fc), self.b_fc))
-        self.res_fc_tensor = tf.reshape(self.res_fc, [-1, 4, 4, 1024])
+        self.res_fc_tensor = tf.reshape(self.res_fc, [self.batch_size, 4, 4, 1024])
 
         # array for the results and output_shape of the Deconv layers
 
@@ -54,7 +54,7 @@ class GeneratorNet:
         output_shape = [[self.batch_size, 8, 8, 512],[self.batch_size, 16, 16, 256],[self.batch_size, 32, 32, 128], [self.batch_size, 64, 64,3]]
 
         # first deconv layer 0 with fc as input
-        self.res_deconv.append(tf.nn.relu(tf.nn.conv2d_transpose(self.res_fc_tensor, self.W_deconv[0], output_shape[0], strides=strides, padding="SAME")+self.b_deconv[0]))
+        self.res_deconv.append(tf.nn.relu(tf.nn.conv2d_transpose(self.res_fc_tensor, self.W_deconv[0], output_shape[0], strides, padding="SAME")+self.b_deconv[0]))
 
         #leaky ReLu?
         #self.res_deconv.append(tf.contrib.keras.layers.LeakyReLu(tf.nn.conv2d_transpose(self.res_fc_tensor, self.W_deconv[0], output_shape[0], strides=strides, padding="VALID")+self.b_deconv[0]))
@@ -68,7 +68,7 @@ class GeneratorNet:
 
         # deconv layer 3 = output layer. No Relu here!!
 
-        self.res_deconv.append(tf.add(tf.nn.conv2d_transpose(self.res_deconv[2], self.W_deconv[3], output_shape[3], strides=strides, padding="SAME"),self.b_deconv[3]))
+        self.res_deconv.append(tf.add(tf.nn.conv2d_transpose(self.res_deconv[2], self.W_deconv[3], output_shape[3], strides, padding="SAME"),self.b_deconv[3]))
 
         # give it a nice name
 

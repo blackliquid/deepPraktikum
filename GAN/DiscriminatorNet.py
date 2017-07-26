@@ -2,9 +2,10 @@ import tensorflow as tf
 
 class DiscriminatorNet:
 
-    def __init__(self, mean, sdev, generatorNet, classify = False):
+    def __init__(self, mean, sdev, batch_size, generatorNet, classify = False):
         self.generatorNet = generatorNet
         self.classify = classify
+        self.batch_size = batch_size
 
         self.defineWeights(mean, sdev)
 
@@ -82,7 +83,7 @@ class DiscriminatorNet:
         #leaky ReLu?
         #self.res_conv.append(tf.contrib.keras.layers.LeakyReLu(tf.nn.conv2d(self.input_batch, self.W_conv[0], strides=[1, 1, 1, 1], padding='SAME')+self.b_conv[0]))
 
-        self.res_pool.append(tf.nn.avg_pool(self.res_conv[0], ksize = [1, 2, 2, 1], strides = [1, 2, 2, 1], padding = 'SAME' ))
+        self.res_pool.append(tf.nn.avg_pool(self.res_conv[0], ksize = [1, 2, 2, 1], strides = [1, 2, 2, 1], padding = 'SAME'))
 
         #define convlayer 1-3
 
@@ -92,7 +93,7 @@ class DiscriminatorNet:
             #self.res_conv.append(tf.contrib.keras.layers.LeakyReLu(tf.nn.conv2d(self.res_pool[i-1], self.W_conv[i], strides=[1, 1, 1, 1], padding='SAME') + self.b_conv[i]))
             self.res_pool.append(tf.nn.avg_pool(self.res_conv[i], ksize = [1, 2, 2, 1], strides = [1, 2, 2, 1], padding = 'SAME' ))
 
-        self.res_conv3_flat = tf.reshape(self.res_pool[3], [-1, 4*4*768])
+        self.res_conv3_flat = tf.reshape(self.res_pool[3], [self.batch_size, 4*4*768])
 
 
         #define array for FC layers
