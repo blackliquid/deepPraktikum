@@ -23,7 +23,7 @@ batch_size = graph.get_tensor_by_name("batch_size:0")
 batch_size_now = 50
 
 filelist = random_filelist(batch_size_now)
-batch = np.array([scipy.misc.imread('./img_align_celeba_resized/' + bild) for bild in filelist])
+batch = np.array([scipy.misc.imread('./Datasets/img_align_celeba_resized/' + bild) for bild in filelist])
 result = sess.run(output_img, feed_dict = {x: batch, batch_size:batch_size_now})
 img = np.reshape(result, [50, 64, 64,3])
 
