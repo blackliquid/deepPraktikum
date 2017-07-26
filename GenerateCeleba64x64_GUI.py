@@ -98,7 +98,7 @@ def compute_image(_=None):
 
 
 def scale_image(newscale):
-    global scale, image_tk
+    global scale, image_tk, image_scaled
     scale = int(newscale)
     canvas.config(width=64*scale, height=64*scale)
     image_scaled = image_unscaled.resize((64*scale, 64*scale))
@@ -116,7 +116,7 @@ def save_image(_=None):
     number = 0
     while os.path.exists('face%06i.png'%number):
         number += 1
-    scipy.misc.imsave('face%06i.png'%number, image_unscaled)
+    image_unscaled.save('face%06i.png'%number)
 
 
 window = tk.Tk()

@@ -110,7 +110,7 @@ sess.run(tf.global_variables_initializer())
 saver = tf.train.Saver()
 
 filelist = nums_to_filelist([1, 2])
-batch = np.array([scipy.misc.imread('./img_align_celeba_resized/'+bild) for bild in filelist])
+batch = np.array([scipy.misc.imread('./Datasets/img_align_celeba_resized/'+bild) for bild in filelist])
 img = sess.run(output_img, feed_dict={x: batch, batch_size: batch_size_now})
 
 scipy.misc.imsave('imagesCeleba64x64_mean/image.png', img[0])
