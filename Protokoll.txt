@@ -1,8 +1,10 @@
-Protokoll Deep Learning Praktikum (17.07.17 bis 28.07.17)
+﻿Protokoll Deep Learning Praktikum (17.07.17 bis 28.07.17)
+Christian Ali, Janka Bauer, Niklas Bockius
 
 Montag, 17.07.:
 	Vorbesprechung/ Einführung in Deep Learning 
 	Initialisierung eines Git-Repository 
+	Einarbeiten
 	
 Dienstag, 18.07.:
 	AutoEncoder für MNIST aufbauend auf dem Tutorial:
@@ -34,3 +36,22 @@ Freitag, 21.07.:
 	--> Bilder verschwommen, aber erkennbar
 	--> individuelle Details werden entfernt/ gehen verloren
 	Weiterentwicklung des GAN-Algorithmus
+
+Montag, 24.07.:
+	Erzeugung gemittelter Bilder, dh im Bottleneck der CelebA AutoEncoders zwei (oder mehr) Bilder gemittelt 
+	und als ein Bild zurückgeneriert
+	--> nach wie vor verschwommene Bilder, aber je nach gewählter Kombination der Eingabebilder sind aus jedem 
+	    Bild einzelne Details gut erkennbar
+	Anschließend Erzeugung zufälliger Gesichter
+	--> anfangs nur Rauschen erkennbar
+	** Verbesserung durch Einbindung einer PCA / Kovarianzmatrix, sd Werte (im Bottleneck) mit der entsprechenden 
+           Verteilung gesamplet werden können!
+	--> Danach realistische Bilder
+	Einbindung von Schiebereglern, der entlang der Hauptachsen der PCA die Gewichtung der Werte verändert, sd
+	die zufällig erzeugten Bilder in Echtzeit verändert werden können
+	--> Veränderungen (bei entsprechend hoher Skalierung der Gewichte) gut erkennbar, jedoch ändern sich bei den
+	    meisten Schiebereglern ähnliche "Eigenschaften" wie Hintergrund, Haarlänge, Haarfarbe... hier muss noch 
+	    etwas gefeilt werden.
+
+Dienstag, 25.07.:
+	Weitere Bearbeitung der Schieberegler, sd Bild direkt neben den Schiebereglern angezeigt und aktualisiert wird
