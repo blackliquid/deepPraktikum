@@ -13,8 +13,8 @@ class GAN:
         numIter = 100000
         batch_size = 50
         numIter_disc = 1 #number of times the disc gets updated for every time the gen gets updated
-        max_range = 202599
-        #max_range = 1000
+        #max_range = 202599
+        max_range = 1000
 
         #init placehodler
 
@@ -22,12 +22,12 @@ class GAN:
 
         #init nets
 
-        generatorNet = GeneratorNet(mean, sdev, self.batch_size)
+        generatorNet = GeneratorNet(mean, sdev, self.batch_size, self.random_numbers)
         discriminatorNet = DiscriminatorNet(mean, sdev, self.batch_size, generatorNet)
 
         #init loss
 
-        self.defineLoss(generatorNet, discriminatorNet)
+        self.defineLossReal(generatorNet, discriminatorNet)
 
         #init sess
 
@@ -35,7 +35,7 @@ class GAN:
 
         #train the net
 
-        self.train(numIter, batch_size, numIter_disc, generatorNet, max_range)
+        self.trainReal(numIter, batch_size, numIter_disc, generatorNet, max_range)
 
     def createRunSess(self):
         # run the computation
@@ -56,26 +56,40 @@ class GAN:
 
 
         self.batch_size = tf.placeholder(tf.int32, shape = None,
-                                          name="input_batch")
+                                          name="batch_size")
 
         #placeholder for batch_size
 
         self.input_batch = tf.placeholder(tf.float32, shape = [None, 64, 64, 3],
                                           name="input_batch")
 
+        #placeholder for random numbers
+
+        self.random_numbers = tf.placeholder(tf.float32, shape = [None, 100],
+                                          name="random_numbers")
+
+        self.labels = tf.placeholder(tf.float32, shape=[None, 2],
+                                             name="labels")
+
+    def generate_rand(self, batch_size):
+        return np.random.uniform(-1., 1., [batch_size, 100])
+
 
     def train(self, numIter, batch_size, numIter_disc, generatorNet, max_range):
         print("starting training...")
         with self.sess.as_default():
-            for i in range(0, numIter):
+            for i in range(1, numIter):
                 for k in range(numIter_disc):
                     # train discriminator with batch of db images
 
-                    batch_real, _ = self.newBatch(batch_size, max_range=max_range)
+                    batch_real, _ = self.newBatch(batch_size, max_range)
                     self.batchNorm(batch_real)
 
-                    _, D_loss_curr = self.sess.run([self.D_solver, self.D_loss], feed_dict={self.input_batch: batch_real, self.batch_size:batch_size})
-                    print("updating discriminator. k=%d" %k)
+                    rand = self.generate_rand(batch_size)
+
+                    _, D_loss_curr = self.sess.run([self.D_solver, self.D_loss],
+                                                   feed_dict={self.input_batch: batch_real, self.batch_size: batch_size, self.random_numbers: rand})
+                    print("updating discriminator. Loss : %g " %D_loss_curr)
 
                 if i % 1000 is 0 :
                     print("saving image batch...")
@@ -83,9 +97,9 @@ class GAN:
                     # while training save some of the generated images
                     #save all of the batch_size generated images
 
+                    rand = self.generate_rand(batch_size)
                     generated_img = self.sess.run(generatorNet.generated_img,
-                                                  feed_dict={self.input_batch: batch_real,
-                                                             self.batch_size: batch_size})
+                                                  feed_dict={self.batch_size: batch_size, self.random_numbers: rand})
 
                     for j in range(batch_size):
                         scipy.misc.imsave("../Datasets/GAN_generated/iter_%d_no_%d.png" %(i, j), generated_img[j])
@@ -93,8 +107,10 @@ class GAN:
                 else :
                     # train generator with batch_size generated images
 
-                    _, G_loss_curr = self.sess.run([self.G_solver, self.D_loss], feed_dict={self.input_batch: batch_real, self.batch_size:batch_size}) #feed it images too to not cause error
-                    print("updating generator. Iteration %d" %i)
+                    rand = self.generate_rand(batch_size)
+                    _, G_loss_curr = self.sess.run([self.G_solver, self.G_loss],
+                                                   feed_dict={self.batch_size:batch_size, self.random_numbers: rand})
+                    print("updating generator. Iteration %d. Loss : %g" %(i, G_loss_curr))
 
 
 
@@ -166,6 +182,7 @@ class GAN:
                 elif num > max_num:
                     break
         return result
+#
 
     def newBatch(self, batch_size, max_range):
         #read new random batch out of DB. max_range indicates that we can sample from image 0 to max_range.
@@ -177,6 +194,19 @@ class GAN:
         labels = attribs[:, 3, :]
         return batch, labels
 
+    def defineLossReal(self, generatorNet, discriminatorNet):
+        d_scope_vars = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='d_scope')
+        D_real, D_logit_real = discriminatorNet.defineGraph(self.input_batch)
+        self.D_loss_real = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels = self.labels, logits = D_logit_real))
+        self.D_solver = tf.train.AdamOptimizer().minimize(loss=self.D_loss_real, var_list=d_scope_vars)
+
+    def trainReal(self, numIter, batch_size, numIter_disc, generatorNet, max_range):
+        for i in range(numIter):
+            batch, labels = self.newBatch(batch_size, max_range)
+            self.batchNorm(batch)
+            print(self.sess.run([self.D_loss_real, self.D_solver], feed_dict= {self.input_batch: batch , self.batch_size: batch_size, self.labels: labels})[0])
+
+
     def defineLoss(self, generatorNet, discriminatorNet):
         # define the graphs we need for the loss function
 
@@ -184,7 +214,7 @@ class GAN:
         D_real, D_logit_real = discriminatorNet.defineGraph(self.input_batch)
         D_fake, D_logit_fake = discriminatorNet.defineGraph(G_sample)
 
-        #get varaibles from different scopes. This is because we want to update only certain variables and not all in ech training step
+        #get varaibles from different scopes. This is because we want to update only certain variables and not all in each training step
 
         d_scope_vars = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='d_scope')
         g_scope_vars = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='g_scope')
@@ -196,5 +226,22 @@ class GAN:
 
         self.D_solver = tf.train.AdamOptimizer().minimize(loss = self.D_loss, var_list = d_scope_vars)
         self.G_solver = tf.train.AdamOptimizer().minimize(loss = self.G_loss, var_list = g_scope_vars)
+
+    def defineLossAlt(self, generatorNet, discriminatorNet):
+        G_sample = generatorNet.generated_img
+        D_real, D_logit_real = discriminatorNet.defineGraph(self.input_batch)
+        D_fake, D_logit_fake = discriminatorNet.defineGraph(G_sample)
+
+        d_scope_vars = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='d_scope')
+        g_scope_vars = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='g_scope')
+
+        D_loss_real = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels = tf.ones_like(D_logit_real), logits = D_logit_real))
+        D_loss_fake = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels = tf.zeros_like(D_logit_fake), logits = D_logit_fake))
+
+        self.D_loss = D_loss_real + D_loss_fake
+        self.G_loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(labels = tf.ones_like(D_logit_fake), logits = D_logit_fake))
+
+        self.D_solver = tf.train.AdamOptimizer().minimize(loss=self.D_loss, var_list=d_scope_vars)
+        self.G_solver = tf.train.AdamOptimizer().minimize(loss=self.G_loss, var_list=g_scope_vars)
 
 gan = GAN()

@@ -2,11 +2,11 @@ import tensorflow as tf
 
 class GeneratorNet:
 
-    def __init__(self, mean, sdev, batch_size):
+    def __init__(self, mean, sdev, batch_size, random_numbers):
         self.batch_size = batch_size
 
         self.defineWeights(mean, sdev)
-        self.defineGraph()
+        self.defineGraph(random_numbers)
 
     def defineWeights(self, mean, sdev):
         with tf.variable_scope("g_scope", initializer=tf.random_normal_initializer(mean, sdev)):
@@ -26,7 +26,7 @@ class GeneratorNet:
             self.W_deconv.append(tf.get_variable("W_deconv_3", [5, 5, 3, 128]))
             self.b_deconv.append(tf.get_variable("b_deconv_3", [3]))
 
-    def defineGraph(self):
+    def defineGraph(self, random_numbers):
         # create the tf computation graph
 
         '''FC : 100 -> batch_size*4*4*1024
@@ -35,14 +35,11 @@ class GeneratorNet:
         Deconv 2 : batch_size*16*16*256 -> batch_size*32*32*128
         Deconv 3 batch_size*32*32*128 -> batch_size*64*64*3'''
 
-        # create uniform random vals als input layer
-
-        self.randVals = tf.random_uniform(shape=[100*self.batch_size], minval=0, maxval=1, dtype=tf.float32)
-        self.randVals_tensor = tf.reshape(self.randVals, [self.batch_size, 100])
+        self.random_numbers_tensor = tf.reshape(random_numbers, [self.batch_size, 100])
 
         # result of the FC layer
 
-        self.res_fc = tf.nn.relu(tf.add(tf.matmul(self.randVals_tensor, self.W_fc), self.b_fc))
+        self.res_fc = tf.nn.relu(tf.add(tf.matmul(self.random_numbers_tensor, self.W_fc), self.b_fc))
         #leaky ReLu?
         ##self.res_fc = tf.contrib.keras.layers.LeakyReLu(tf.add(tf.matmul(self.randVals_tensor, self.W_fc), self.b_fc))
         self.res_fc_tensor = tf.reshape(self.res_fc, [self.batch_size, 4, 4, 1024])

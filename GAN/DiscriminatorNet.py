@@ -100,16 +100,20 @@ class DiscriminatorNet:
 
         self.res_fc = []
 
-        #fill it with fc1 and fc2
+        #fill it with fc0 and fc1
 
         self.res_fc.append(tf.nn.relu(tf.matmul(self.res_conv3_flat, self.W_fc[0])+self.b_fc[0]))
         #leaky ReLu?
         #self.res_fc.append(tf.contrib.keras.layers.LeakyReLu(tf.matmul(self.res_conv3_flat, self.W_fc[0])+self.b_fc[0]))
 
-        self.res_fc.append(tf.add(tf.matmul(self.res_fc[0], self.W_fc[1]),self.b_fc[1], name="res_fc2")) #no reLu here!
+        self.res_fc.append(tf.add(tf.matmul(self.res_fc[0], self.W_fc[1]),self.b_fc[1])) #no reLu here!
 
         #give it a nice name
 
+        self.logits = tf.identity(self.res_fc[1], name="logits")
+
+        #apply sigmoid
+
         self.probs = tf.nn.sigmoid(self.res_fc[1], name = "probs")
 
-        return tf.identity(self.res_fc[1], name = "logits"), self.probs
+        return self.probs, self.logits

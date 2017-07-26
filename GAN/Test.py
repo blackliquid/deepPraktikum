@@ -98,6 +98,7 @@ numPics = 202599
 batch_size = 64
 max_range = 1000
 
+
 discriminatorNet = DiscriminatorNet(sdev, classify= True)
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
