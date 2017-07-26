@@ -77,7 +77,7 @@ class GAN:
                 _, G_loss_curr = self.sess.run([self.G_solver, self.D_loss])
 
 
-    def batchNorm(batch, eps=0.01, gamma=1, beta=0):
+    def batchNorm(self, batch, eps=0.01, gamma=1, beta=0):
         batch_size = batch.shape[0]
         xdim = batch.shape[1]
         ydim = batch.shape[2]
