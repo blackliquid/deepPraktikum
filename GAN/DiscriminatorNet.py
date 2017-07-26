@@ -2,67 +2,69 @@ import tensorflow as tf
 
 class DiscriminatorNet:
 
-    def __init__(self, sdev, generatorNet, classify = False):
-        self.sdev = sdev
+    def __init__(self, mean, sdev, generatorNet, classify = False):
         self.generatorNet = generatorNet
         self.classify = classify
-        self.defineWeights()
 
-    def weight_variable(self, shape): #shortcuts for defining the filters
-        initial = tf.truncated_normal(shape, stddev=self.sdev)
-        return tf.Variable(initial)
+        self.defineWeights(mean, sdev)
 
-    def bias_variable(self, shape):
-        initial = tf.constant(self.sdev, shape=shape)
-        return tf.Variable(initial)
+    def defineWeights(self, mean, sdev):
+        with tf.variable_scope("d_scope", initializer=tf.random_normal_initializer(mean, sdev)):
 
-    def defineWeights(self):
-        with tf.variable_scope("d_scope"):
+            '''conv 0 : batch_size*64*64*3 -> batch_size*64*64*96
+             pool 0 : batch_size*64*64*96 -> batch_size*32*32*96
+             conv 1 : batch_size*32*32*96 -> batch_size*32*32*192
+             pool 1 : batch_size*32*32*192 -> batch_size*16*16*192
+             conv 2 : batch_size*16*16*192 -> batch_size*16*16*384
+             pool 2 : batch_size*16*16*384 -> batch_size*8*8*384
+             conv 3 : batch_size*8*8*384 -> batch_size*8*8*768
+             pool 3 : batch_size*8*8*784 -> batch_size*4*4*784
+             FC0 : batch_size*4*4*768 -> batch_size*1000
+             FC1 : batch_size*1000 -> batch_size*2'''
+
             # define weights for the convLayers 0-3
-            '''conv 1 : 64*64*3 -> 64*64*96
-            pool 1 : 64*64*96 -> 32*32*96
-            conv 2 : 32*32*96 -> 32*32*192
-            pool2 : 32*32*192 -> 16*16*192
-            conv 3 : 16*16*192 -> 16*16*384
-            pool 3 : 16*16*384 -> 8*8*384
-            conv 4 : 8*8*384 -> 8*8*768
-            pool 4 : 8*8*784 -> 4*4*784'''
+
 
             self.W_conv = []
             self.b_conv = []
 
             # add weight variables for the first convlayer
 
-            self.W_conv.append(self.weight_variable([5, 5, 3, 32 * 3]))
-            self.b_conv.append(self.bias_variable([32 * 3]))
+            #filter dims for conv2d : [h, w, in out]
+
+            self.W_conv.append(tf.get_variable("W_conv_0", [5, 5, 3, 32 * 3]))
+            self.b_conv.append(tf.get_variable("b_conv_0", [32 * 3]))
 
             # number of channels for the last 3 layers
 
             conv_dims = [96, 192, 384]
 
-            # add weight variables for last 3 convlayers
+            # add weight variables for convlayers 1-3
 
-            for i in conv_dims:
-                self.W_conv.append(self.weight_variable([5, 5, i, i * 2]))
-                self.b_conv.append(self.bias_variable([i * 2]))
+            for dims, i in zip(conv_dims, range(1,4)):
+                self.W_conv.append(tf.get_variable("W_conv_%d" %i, [5, 5, dims, dims * 2]))
+                self.b_conv.append(tf.get_variable("b_conv_%d" %i, [dims * 2]))
 
             # define weights for the two FC layers
-            '''FC1 : 4*4*768 -> 1000
-            FC2 : 1000 -> 2'''
+
+
 
             self.W_fc = []
             self.b_fc = []
 
+            # define weights for FC0
+
+            self.W_fc.append(tf.get_variable("W_fc_0", [4 * 4 * 768, 1000]))
+            self.b_fc.append(tf.get_variable("b_fc_0", [1000]))
+
             # define weights for FC1
 
-            self.W_fc.append(self.weight_variable([4 * 4 * 768, 1000]))
-            self.b_fc.append(self.bias_variable([1000]))
+            self.W_fc.append(tf.get_variable("W_fc_1", [1000, 2]))
+            self.b_fc.append(tf.get_variable("b_fc_1", [2]))
 
-            # define weights for FC2
+            # set reuse flag true!
 
-            self.W_fc.append(self.weight_variable([1000, 2]))
-            self.b_fc.append(self.bias_variable([2]))
-
+            tf.get_variable_scope().reuse_variables()
 
     def defineGraph(self, input_batch):
         #define graph for convlayers

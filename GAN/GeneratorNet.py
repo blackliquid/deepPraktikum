@@ -2,49 +2,38 @@ import tensorflow as tf
 
 class GeneratorNet:
 
-    def __init__(self, sdev, batch_size):
-        self.sdev = sdev
+    def __init__(self, mean, sdev, batch_size):
         self.batch_size = batch_size
 
-        self.defineWeights()
+        self.defineWeights(mean, sdev)
         self.defineGraph()
 
-    def weight_variable(self, shape):
-        # shortcuts for defining the filters
-
-        initial = tf.truncated_normal(shape, stddev=self.sdev)
-        return tf.Variable(initial)
-
-    def bias_variable(self, shape):
-        initial = tf.constant(self.sdev, shape=shape)
-        return tf.Variable(initial)
-
-    def defineWeights(self):
-        with tf.variable_scope("g_scope"):
+    def defineWeights(self, mean, sdev):
+        with tf.variable_scope("g_scope", initializer=tf.random_normal_initializer(mean, sdev)):
             # define all the weights for the network
 
-            self.W_fc = self.weight_variable([100, 1024 * 4 * 4])
-            self.b_fc = self.bias_variable([1024 * 4 * 4])
+            self.W_fc = tf.get_variable("W_fc", [100, 1024 * 4 * 4])
+            self.b_fc = tf.get_variable("b_fc", [1024 * 4 * 4])
 
             self.W_deconv = []
             self.b_deconv = []
-            deconv_dims = [1024, 512, 256]
+            deconv_dims = [512, 256, 128]
 
-            for i in deconv_dims:
-                self.W_deconv.append(self.weight_variable([5, 5, int(i / 2), i]))  # [x,y,out,in]
-                self.b_deconv.append(self.bias_variable([int(i / 2)]))
+            for dims, i in zip(deconv_dims, range(0,3)):
+                self.W_deconv.append(tf.get_variable("W_deconv_%d" %i, [5, 5, dims, dims * 2]))  # [x,y,out,in]
+                self.b_deconv.append(tf.get_variable("b_deconv_%d" %i, [dims]))
 
-            self.W_deconv.append(self.weight_variable([5, 5, 3, 128]))
-            self.b_deconv.append(self.bias_variable([3]))
+            self.W_deconv.append(tf.get_variable("W_deconv_3", [5, 5, 3, 128]))
+            self.b_deconv.append(tf.get_variable("b_deconv_3", [3]))
 
     def defineGraph(self):
         # create the tf computation graph
 
-        '''FC : 100 -> 1024*4*4
-        Deconv 0 : 1024*4*4 -> 512*8*8
-        Deconv 1 : 512*8*8 -> 256*16*16
-        Deconv 2 : 256*16*16 -> 128*32*32
-        Deconv 3 128*32*32 -> 3*64*64'''
+        '''FC : 100 -> batch_size*4*4*1024
+        Deconv 0 : batch_size*4*4*1024 -> batch_size*8*8*512
+        Deconv 1 : batch_size*8*8*512 -> batch_size*16*16*256
+        Deconv 2 : batch_size*16*16*256 -> batch_size*32*32*128
+        Deconv 3 batch_size*32*32*128 -> batch_size*64*64*3'''
 
         # create uniform random vals als input layer
 
@@ -62,10 +51,10 @@ class GeneratorNet:
 
         self.res_deconv = []
         strides = [1, 2, 2, 1]
-        output_shape = [[self.batch_size, 8, 8, 512],[self.batch_size, 16, 16, 256],[self.batch_size, 8, 8, 128], [self.batch_size, 64, 64,3]]
+        output_shape = [[self.batch_size, 8, 8, 512],[self.batch_size, 16, 16, 256],[self.batch_size, 32, 32, 128], [self.batch_size, 64, 64,3]]
 
         # first deconv layer 0 with fc as input
-        self.res_deconv.append(tf.nn.relu(tf.nn.conv2d_transpose(self.res_fc_tensor, self.W_deconv[0], output_shape[0], strides=strides, padding="VALID")+self.b_deconv[0]))
+        self.res_deconv.append(tf.nn.relu(tf.nn.conv2d_transpose(self.res_fc_tensor, self.W_deconv[0], output_shape[0], strides=strides, padding="SAME")+self.b_deconv[0]))
 
         #leaky ReLu?
         #self.res_deconv.append(tf.contrib.keras.layers.LeakyReLu(tf.nn.conv2d_transpose(self.res_fc_tensor, self.W_deconv[0], output_shape[0], strides=strides, padding="VALID")+self.b_deconv[0]))
@@ -73,13 +62,13 @@ class GeneratorNet:
         # deconv layers 1-2
 
         for i in range(1, 3):
-            self.res_deconv.append(tf.nn.relu(tf.nn.conv2d_transpose(self.res_deconv[i-1], self.W_deconv[i], output_shape[i], strides, padding="VALID")+self.b_deconv[i]))
+            self.res_deconv.append(tf.nn.relu(tf.nn.conv2d_transpose(self.res_deconv[i-1], self.W_deconv[i], output_shape[i], strides, padding="SAME")+self.b_deconv[i]))
             #leaky ReLu?
             #self.res_deconv.append(tf.contrib.keras.layers.LeakyReLu(tf.nn.conv2d_transpose(self.res_deconv[i-1], self.W_deconv[i], output_shape[i], strides, padding="VALID")+self.b_deconv[i]))
 
         # deconv layer 3 = output layer. No Relu here!!
 
-        self.res_deconv.append(tf.add(tf.nn.conv2d_transpose(self.res_deconv[2], self.W_deconv[3], output_shape[3], strides=strides, padding="VALID"),self.b_deconv[3]))
+        self.res_deconv.append(tf.add(tf.nn.conv2d_transpose(self.res_deconv[2], self.W_deconv[3], output_shape[3], strides=strides, padding="SAME"),self.b_deconv[3]))
 
         # give it a nice name
 

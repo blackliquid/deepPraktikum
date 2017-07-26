@@ -9,6 +9,7 @@ class GAN:
 
     def __init__(self):
         sdev = 0.1
+        mean = 0.5
         numIter = 100000
         batch_size = 50
         numIter_disc = 1 #number of times the disc gets updated for every time the gen gets updated
@@ -19,8 +20,8 @@ class GAN:
 
         #init nets
 
-        generatorNet = GeneratorNet(sdev, batch_size)
-        discriminatorNet = DiscriminatorNet(sdev, generatorNet)
+        generatorNet = GeneratorNet(mean, sdev, batch_size)
+        discriminatorNet = DiscriminatorNet(mean, sdev, generatorNet)
 
         #init loss
 
@@ -33,8 +34,6 @@ class GAN:
         #train the net
 
         self.train(numIter, batch_size, numIter_disc)
-
-
 
     def createRunSess(self):
         # run the computation
@@ -56,21 +55,17 @@ class GAN:
         self.input_batch = tf.placeholder(tf.float32, shape=[None, 64, 64, 3],
                                           name="input_batch")
 
-        # placeholder for labels : generated or real
-        self.labels = tf.placeholder(tf.float32, shape=[None, 2],
-                                     name="labels")
-
     def train(self, numIter, batch_size, numIter_disc):
         with self.sess.as_default():
             for i in range(0, numIter):
                 for k in range(numIter_disc):
                     # train discriminator with batch of db images
 
-                    batch_real, labels_real = self.newBatch(batch_size)
+                    batch_real, _ = self.newBatch(batch_size)
                     self.batchNorm(batch_real)
 
-
-                    _, D_loss_curr = self.sess.run([self.D_solver, self.D_loss], feed_dict = {self.input_batch: batch_real, self.labels: labels_real})
+                    _, D_loss_curr = self.sess.run([self.D_loss], feed_dict = {self.input_batch: batch_real})
+                    #_, D_loss_curr = self.sess.run([self.D_solver, self.D_loss], feed_dict={self.input_batch: batch_real})
 
                 # train generator and discriminator with batch_size generated images
 
@@ -157,17 +152,16 @@ class GAN:
         return batch, labels
 
     def defineLoss(self, generatorNet, discriminatorNet):
-        #get varaibles from different scopes. This is because we want to update only certain variables and not all in ech training step
-
-        d_scope_vars = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='d_scope')
-        g_scope_vars = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='g_scope')
-
-
-        # define the vars we need for the loss function
+        # define the graphs we need for the loss function
 
         G_sample = generatorNet.generated_img
         D_real, D_logit_real = discriminatorNet.defineGraph(self.input_batch)
         D_fake, D_logit_fake = discriminatorNet.defineGraph(G_sample)
+
+        #get varaibles from different scopes. This is because we want to update only certain variables and not all in ech training step
+
+        d_scope_vars = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='d_scope')
+        g_scope_vars = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope='g_scope')
 
         #define the loss function and minimizer for both nets
 
