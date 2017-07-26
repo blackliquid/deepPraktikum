@@ -98,17 +98,16 @@ class GAN:
         # calculate the normalised and shifted/scaled batch
 
         for i in range(0, batch_size):
-            batch[i] = avg - batch[i]  # subtract from avg
+            batch[i] = batch[i] -avg  # subtract from avg
             batch[i] /= np.sqrt(stddev + eps)  # normalize
             batch[i] = gamma * batch[i] + beta  # scale and shift
 
     def readBatch(self, batch_size, max_range):
-        for i in range(0, batch_size):
-            rand = np.random.randint(1, max_range, size=batch_size)
-            batch = np.ndarray(shape=[batch_size, 64, 64, 3])
-            for i in rand:
-                img = scipy.misc.imread("../Datasets/img_align_celeba_resized/%06d.png" % i)
-                batch[0] = img
+        rand = np.random.randint(1, max_range, size=batch_size)
+        batch = np.ndarray(shape=[batch_size, 64, 64, 3])
+        for i in range(batch_size):
+            img = scipy.misc.imread("../Datasets/img_align_celeba_resized/%06d.png" % rand[i])
+            batch[i] = img
         return batch, rand
 
     def split_lines3D(self, lines):
