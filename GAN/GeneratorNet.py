@@ -9,7 +9,8 @@ class GeneratorNet:
         self.defineGraph(random_numbers)
 
     def defineWeights(self, mean, sdev):
-        with tf.variable_scope("g_scope", initializer=tf.random_normal_initializer(mean, sdev)):
+        with tf.variable_scope("g_scope", initializer=tf.contrib.layers.xavier_initializer()):
+        # with tf.variable_scope("g_scope", initializer=tf.random_normal_initializer(mean, sdev)):
             # define all the weights for the network
 
             self.W_fc = tf.get_variable("W_fc", [100, 1024 * 4 * 4])

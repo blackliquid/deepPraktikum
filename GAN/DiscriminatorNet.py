@@ -10,7 +10,7 @@ class DiscriminatorNet:
         self.defineWeights(mean, sdev)
 
     def defineWeights(self, mean, sdev):
-        with tf.variable_scope("d_scope", initializer=tf.random_normal_initializer(mean, sdev)):
+        with tf.variable_scope("d_scope", initializer=tf.contrib.layers.xavier_initializer()):
 
             '''conv 0 : batch_size*64*64*3 -> batch_size*64*64*96
              pool 0 : batch_size*64*64*96 -> batch_size*32*32*96
@@ -60,8 +60,8 @@ class DiscriminatorNet:
 
             # define weights for FC1
 
-            self.W_fc.append(tf.get_variable("W_fc_1", [1000, 2]))
-            self.b_fc.append(tf.get_variable("b_fc_1", [2]))
+            self.W_fc.append(tf.get_variable("W_fc_1", [1000, 1]))
+            self.b_fc.append(tf.get_variable("b_fc_1", [1]))
 
             # set reuse flag true!
 

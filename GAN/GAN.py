@@ -11,7 +11,7 @@ class GAN:
         sdev = 0.1
         mean = 0.5
         numIter = 100000
-        batch_size = 50
+        batch_size = 128
         numIter_disc = 1 #number of times the disc gets updated for every time the gen gets updated
         #max_range = 202599
         max_range = 1000
@@ -27,7 +27,7 @@ class GAN:
 
         #init loss
 
-        self.defineLossReal(generatorNet, discriminatorNet)
+        self.defineLossAlt(generatorNet, discriminatorNet)
 
         #init sess
 
@@ -35,7 +35,7 @@ class GAN:
 
         #train the net
 
-        self.trainReal(numIter, batch_size, numIter_disc, generatorNet, max_range)
+        self.train(numIter, batch_size, numIter_disc, generatorNet, max_range)
 
     def createRunSess(self):
         # run the computation
@@ -68,7 +68,7 @@ class GAN:
         self.random_numbers = tf.placeholder(tf.float32, shape = [None, 100],
                                           name="random_numbers")
 
-        self.labels = tf.placeholder(tf.float32, shape=[None, 2],
+        self.labels = tf.placeholder(tf.float32, shape=None,
                                              name="labels")
 
     def generate_rand(self, batch_size):
@@ -91,7 +91,7 @@ class GAN:
                                                    feed_dict={self.input_batch: batch_real, self.batch_size: batch_size, self.random_numbers: rand})
                     print("updating discriminator. Loss : %g " %D_loss_curr)
 
-                if i % 1000 is 0 :
+                if i % 500 is 0 :
                     print("saving image batch...")
 
                     # while training save some of the generated images
@@ -147,6 +147,17 @@ class GAN:
             batch[i] = img
         return batch, rand
 
+    def split_lines(self, lines):
+        if isinstance(lines, int):
+            lines = [lines]
+        result = []
+        for line in lines:
+            split_line = line.split(' ')
+            split_line = [i for i in split_line if i != '']
+            split_line[0] = split_line[0][0:split_line[0].index('.')]
+            result.append([int(i) for i in split_line])
+        return result
+
     def split_lines3D(self, lines):
         # Important: Do not change the list entries before converting them to an np.array!!!
 
@@ -190,8 +201,8 @@ class GAN:
         batch, rand = self.readBatch(batch_size, max_range)
         self.batchNorm(batch)
         read = self.read_lines(rand)
-        attribs = np.array(self.split_lines3D(read))
-        labels = attribs[:, 3, :]
+        attribs = np.array(self.split_lines(read))
+        labels = attribs[:, 3]
         return batch, labels
 
     def defineLossReal(self, generatorNet, discriminatorNet):
